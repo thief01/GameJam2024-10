@@ -1,0 +1,3 @@
+[submodule "Assets/WRA-SDK"]
+	path = Assets/WRA-SDK
+	url = git@github.com:mimi-games/WRA-SDK.git
