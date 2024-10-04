@@ -19,17 +19,13 @@ namespace Character
         public int VariantId { get; set; }
     
         public abstract void OnInit();
-
-
+        
         public abstract void OnSpawn();
 
-
         public abstract void OnBeginKill(float delay);
-
-
+        
         public abstract void OnKill();
-
-
+        
         public void Spawn()
         {
             OnSpawn();
@@ -70,6 +66,5 @@ namespace Character
         {
             Kill();
         }
-
     }
 }
