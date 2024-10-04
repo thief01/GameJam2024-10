@@ -10,14 +10,21 @@ namespace Character
     {
         public UnityEvent<IPoolObject> OnKillEvent;
         public UnityEvent<IPoolObject> OnSpawnEvent;
+        
+        public int VariantId
+        {
+            get => _variantId;
+            set => _variantId = value;
+        }
+
+        [SerializeField] private int _variantId;
     
         public abstract void Move(Vector2 direction);
 
         public abstract void UseSkill(int skillIndex);
 
         public abstract void UpdateMousePosition(Vector2 mousePosition);
-        public int VariantId { get; set; }
-    
+
         public abstract void OnInit();
         
         public abstract void OnSpawn();
