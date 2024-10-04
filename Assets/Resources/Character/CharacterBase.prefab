@@ -97,8 +97,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6157926243225681553}
   - component: {fileID: 4664135683064373126}
+  - component: {fileID: 7543427437021689021}
   m_Layer: 0
-  m_Name: Character
+  m_Name: CharacterBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,3 +136,86 @@ MonoBehaviour:
   OnSystemsRegistered:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7543427437021689021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5668027156207216349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee882ed97e6071d45b4830a04e284899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStatisticsChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  baseStatistics:
+    Health:
+      statValue: 0
+    Condition:
+      statValue: 0
+    Resource:
+      statValue: 0
+    Mana:
+      statValue: 0
+    HealthRegen:
+      statValue: 0
+    ConditionRegen:
+      statValue: 0
+    ResourceRegen:
+      statValue: 0
+    ManaRegen:
+      statValue: 0
+    AttackDamage:
+      statValue: 0
+    MagicPower:
+      statValue: 0
+    PhysicalDef:
+      statValue: 0
+    MagicalDef:
+      statValue: 0
+    AttackSpeed:
+      statValue: 0
+    MovementSpeed:
+      statValue: 0
+    Strenght:
+      statValue: 0
+    Inteligence:
+      statValue: 0
+    Dexterity:
+      statValue: 0
+    Thoughtness:
+      statValue: 0
+    LifeSteal:
+      statValue: 0
+    CriticalChance:
+      statValue: 0
+    CooldownReduction:
+      statValue: 0
+  statValues:
+  - StatisticName: AttackSpeed
+    Value: 0
+  - StatisticName: DamageArea
+    Value: 0
+  - StatisticName: Damage
+    Value: 0
+  - StatisticName: DamageMultiplier
+    Value: 0
+  - StatisticName: CirtMultiplier
+    Value: 0
+  - StatisticName: CirtChance
+    Value: 0
+  - StatisticName: AttackRange
+    Value: 0
+  - StatisticName: MovementSpeed
+    Value: 0
+  - StatisticName: MaxHealth
+    Value: 0
+  - StatisticName: Armor
+    Value: 0
+  - StatisticName: MaxShield
+    Value: 0
+  - StatisticName: Shield
+    Value: 0
