@@ -87,7 +87,8 @@ namespace Pool.Objects
         
         private void UpdatePosition()
         {
-            transform.position = Vector3.MoveTowards(transform.position, GetTargetPosition(), speed.Value * Time.deltaTime);
+            var targetPosition = GetTargetPosition();
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed.Value * Time.deltaTime);
         }
         
         private void UpdateRotation()
@@ -104,7 +105,7 @@ namespace Pool.Objects
         }
         
         
-        public abstract void SetTarget(object target, float damage);
+        public abstract void SetTarget(Transform target, float damage);
         protected abstract Vector3 GetTargetPosition();
     }
 }

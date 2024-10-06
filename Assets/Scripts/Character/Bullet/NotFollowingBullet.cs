@@ -8,10 +8,9 @@ namespace Character.Bullet
     {
         private Vector3 target;
 
-
-        public override void SetTarget(object target, float damage)
+        public override void SetTarget(Transform target, float damage)
         {
-            this.target = (Vector3) target;
+            this.target = target.position;
             this.damage = damage;
         }
 

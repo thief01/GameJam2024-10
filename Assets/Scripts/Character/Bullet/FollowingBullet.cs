@@ -9,23 +9,21 @@ namespace Character.Bullet
     {
         private Transform target;
         private Vector3 lastTargetPosition;
-
-        private void Update()
-        {
-            if (target != null)
-                lastTargetPosition = target.position;
-        }
         
-        public override void SetTarget(object target, float damage)
+        public override void SetTarget(Transform target, float damage)
         {
-            this.target = (Transform) target;
+            this.target = target;
             this.damage = damage;
         }
 
         protected override Vector3 GetTargetPosition()
         {
-            if(target != null)
+            if (target != null)
+            {
+                lastTargetPosition = target.position;
                 return target.position;
+            }
+
             return lastTargetPosition;
         }
     }
