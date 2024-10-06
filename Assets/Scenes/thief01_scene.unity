@@ -118,38 +118,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &448825585 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8627829766209904171, guid: d8a907b2a7dbdfa43a53fedb1d256252, type: 3}
-  m_PrefabInstance: {fileID: 1956643567}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &448825591
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448825585}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
 --- !u!1001 &970734831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,6 +168,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6024632265263389307, guid: 3680eb03d35ea2841b1c3d90ce4d8a88, type: 3}
       propertyPath: baseStatistics.Array.data[0].Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6024632265263389307, guid: 3680eb03d35ea2841b1c3d90ce4d8a88, type: 3}
+      propertyPath: baseStatistics.Array.data[2].Value
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6140157385373888215, guid: 3680eb03d35ea2841b1c3d90ce4d8a88, type: 3}
@@ -466,10 +438,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8627829766209904171, guid: d8a907b2a7dbdfa43a53fedb1d256252, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 448825591}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8a907b2a7dbdfa43a53fedb1d256252, type: 3}
 --- !u!1001 &3395820644525846868
 PrefabInstance:
@@ -524,6 +493,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6024632265263389307, guid: 3680eb03d35ea2841b1c3d90ce4d8a88, type: 3}
+      propertyPath: baseStatistics.Array.data[2].Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6024632265263389307, guid: 3680eb03d35ea2841b1c3d90ce4d8a88, type: 3}
       propertyPath: baseStatistics.Array.data[6].Value
       value: 7.5
       objectReference: {fileID: 0}
@@ -564,6 +537,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3128755664376429819, guid: ffc18c49531fd0f499b2c626d9647478, type: 3}
+      propertyPath: baseStatistics.Array.data[0].Value
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3298430494575151191, guid: ffc18c49531fd0f499b2c626d9647478, type: 3}
       propertyPath: m_Name
       value: TrainCharacter

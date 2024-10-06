@@ -54,7 +54,7 @@ namespace Pool.Objects
                 var enemy = collider.GetComponent<IDamageable>();
                 if (enemy != null)
                 {
-                    enemy.DealDamage(new DamageInfo() { DealtDamage = damage});
+                    enemy.DealDamage(new DamageInfo() { CalculatedValueChanged = damage});
                 }
             }
         }

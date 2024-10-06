@@ -17,6 +17,10 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[8].Value
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
       propertyPath: baseStatistics.Array.data[0].StatisticName
       value: AttackSpeed
       objectReference: {fileID: 0}
@@ -132,7 +136,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5668027156207216349, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
       insertIndex: -1
       addedObject: {fileID: -6530737234853933940}
+    - targetCorrespondingSourceObject: {fileID: 5668027156207216349, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2714023413591616710}
+    - targetCorrespondingSourceObject: {fileID: 5668027156207216349, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3432407494756084308}
   m_SourcePrefab: {fileID: 100100000, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+--- !u!212 &6172752147065801280 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7835929655481152182, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+  m_PrefabInstance: {fileID: 4113147512570001654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8627829766209904171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5668027156207216349, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
@@ -301,3 +316,44 @@ MonoBehaviour:
   OnKilled:
     m_PersistentCalls:
       m_Calls: []
+--- !u!50 &2714023413591616710
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627829766209904171}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!114 &3432407494756084308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627829766209904171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047daf6573f87034ab04564d806cc316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 6172752147065801280}
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
