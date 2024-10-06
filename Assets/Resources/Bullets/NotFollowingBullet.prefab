@@ -62,6 +62,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 475aeedbc19887845960130b89d6c111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnKillEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSpawnEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _variantId: 0
   variantId: 1
 --- !u!114 &2770416878655183468
 MonoBehaviour:
@@ -77,7 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStatistics:
   - StatisticName: Speed
-    Value: 0
+    Value: 3
   - StatisticName: AttackRange
     Value: 0
 --- !u!1 &8618176204865140804

@@ -109,7 +109,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
       propertyPath: baseStatistics.Array.data[6].Value
-      value: 15
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[7].Value
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
       propertyPath: baseStatistics.Array.data[0].StatisticName
@@ -260,6 +264,8 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
+  bulletId: 0
+  muzzle: {fileID: 2480833127602999151}
 --- !u!4 &6831191058354522915 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4995508090666730281, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
