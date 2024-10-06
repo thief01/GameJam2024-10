@@ -9,14 +9,6 @@ namespace Pool.Objects
 {
     public abstract class Bullet : PoolObjectBase
     {
-        public int VariantId
-        {
-            get => variantId;
-            set => variantId = value;
-        }
-
-        [SerializeField] private int variantId;
-        
         protected DynamicStatisticsController dynamicStatisticsController;
         protected DynamicStatisticValue speed;
         protected DynamicStatisticValue attackRange;
@@ -111,6 +103,8 @@ namespace Pool.Objects
             return Vector3.Distance(transform.position, GetTargetPosition()) <= attackRange.Value;
         }
         
+        
+        public abstract void SetTarget(object target, float damage);
         protected abstract Vector3 GetTargetPosition();
     }
 }

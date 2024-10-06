@@ -94,11 +94,13 @@ namespace Character.Behaviours
         {
             if (!rotatedTowardsEnemy)
                 return;
-            var bullet = bulletPool.SpawnObject(bulletId);
+            var bullet = bulletPool.SpawnObject(bulletId) as Pool.Objects.Bullet;
             bullet.transform.position = muzzle.position;
             bullet.transform.rotation = transform.rotation;
             bullet.gameObject.SetActive(true);
             attackCooldown = 1 / attackSpeed.Value;
+            
+            bullet.set
         }
         
         private Collider2D GetClosestEnemy()

@@ -15,11 +15,10 @@ namespace Character.Bullet
             if (target != null)
                 lastTargetPosition = target.position;
         }
-
-        public void SetTarget(Transform t, float damage)
+        
+        public override void SetTarget(object target, float damage)
         {
-            target = t;
-            lastTargetPosition = target.position;
+            this.target = (Transform) target;
             this.damage = damage;
         }
 
