@@ -1,6 +1,7 @@
 using System;
 using Character.Bullet;
 using UnityEngine;
+using WRA.CharacterSystems;
 using WRA.CharacterSystems.StatisticsSystem.Controlers;
 using WRA.CharacterSystems.StatisticsSystem.Statistics;
 using WRA.General.Patterns.Pool;
@@ -8,16 +9,25 @@ using Zenject;
 
 namespace Character.Behaviours
 {
-    public class TowerBehaviour : MonoBehaviour
+    public class TurretBehaviour : CharacterSystemBase
     {
         [SerializeField] private LayerMask enemyLayer;
+        [SerializeField] private int bulletId;
+        [SerializeField] private Transform muzzle;
+        
+        [Inject] private PoolBase<Pool.Objects.Bullet> bulletPool;
+        
         private DynamicStatisticsController dynamicStatisticsController;
         private DynamicStatisticValue attackRange;
         private DynamicStatisticValue rotationSpeed;
+        private DynamicStatisticValue attackSpeed;
         
         private Collider2D[] enemiesInRange;
+        private float attackCooldown;
         
-        [Inject] private PoolBase<Pool.Bullet> bulletPool;
+        private bool rotatedTowardsEnemy;
+        private Transform target;
+
 
         private void Awake()
         {
@@ -28,6 +38,14 @@ namespace Character.Behaviours
         {
             FindEnemies();
             RotateTowardsEnemy();
+            if (attackCooldown <= 0)
+            {
+                Attack();
+            }
+            else
+            {
+                attackCooldown -= Time.deltaTime;
+            }
         }
         
         private void Init()
@@ -35,6 +53,7 @@ namespace Character.Behaviours
             dynamicStatisticsController = GetComponent<DynamicStatisticsController>();
             attackRange = dynamicStatisticsController.GetStatistic("AttackRange");
             rotationSpeed = dynamicStatisticsController.GetStatistic("RotationSpeed");
+            attackSpeed = dynamicStatisticsController.GetStatistic("AttackSpeed");
         }
 
         private void OnDrawGizmosSelected()
@@ -58,13 +77,28 @@ namespace Character.Behaviours
             var closestEnemy = GetClosestEnemy();
             if (closestEnemy == null)
             {
+                target = null;
                 return;
             }
+            target = closestEnemy.transform;
             
             var direction = (closestEnemy.transform.position - transform.position).normalized;
             var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             var rotation = Quaternion.Euler(new Vector3(0, 0, angle));
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotationSpeed.Value * Time.deltaTime);
+            var angleDifference = Quaternion.Angle(transform.rotation, rotation);
+            rotatedTowardsEnemy = angleDifference < 1;
+        }
+        
+        private void Attack()
+        {
+            if (!rotatedTowardsEnemy)
+                return;
+            var bullet = bulletPool.SpawnObject(bulletId);
+            bullet.transform.position = muzzle.position;
+            bullet.transform.rotation = transform.rotation;
+            bullet.gameObject.SetActive(true);
+            attackCooldown = 1 / attackSpeed.Value;
         }
         
         private Collider2D GetClosestEnemy()

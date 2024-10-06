@@ -5,7 +5,7 @@ using WRA.CharacterSystems.StatisticsSystem.Statistics;
 
 namespace Character.Bullet
 {
-    public class FollowingBullet : Pool.Bullet
+    public class FollowingBullet : Pool.Objects.Bullet
     {
         private Transform target;
         private Vector3 lastTargetPosition;

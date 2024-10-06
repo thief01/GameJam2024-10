@@ -5,7 +5,7 @@ using WRA.CharacterSystems.StatisticsSystem.ResourcesInfos;
 using WRA.CharacterSystems.StatisticsSystem.Statistics;
 using WRA.General.Patterns.Pool;
 
-namespace Pool
+namespace Pool.Objects
 {
     public abstract class Bullet : PoolObjectBase
     {

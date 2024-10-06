@@ -4,7 +4,7 @@ using WRA.CharacterSystems.StatisticsSystem.Statistics;
 
 namespace Character.Bullet
 {
-    public class NotFollowingBullet : Pool.Bullet
+    public class NotFollowingBullet : Pool.Objects.Bullet
     {
         private Vector3 target;
 
