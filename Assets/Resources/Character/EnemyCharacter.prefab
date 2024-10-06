@@ -126,6 +126,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5668027156207216349, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4203803185486137689}
+    - targetCorrespondingSourceObject: {fileID: 5668027156207216349, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8904847853008873232}
+    - targetCorrespondingSourceObject: {fileID: 5668027156207216349, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6530737234853933940}
   m_SourcePrefab: {fileID: 100100000, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
 --- !u!1 &8627829766209904171 stripped
 GameObject:
@@ -197,3 +203,101 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8904847853008873232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627829766209904171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee882ed97e6071d45b4830a04e284899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStatisticsChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  baseStatistics:
+    Health:
+      statValue: 0
+    Condition:
+      statValue: 0
+    Resource:
+      statValue: 0
+    Mana:
+      statValue: 0
+    HealthRegen:
+      statValue: 0
+    ConditionRegen:
+      statValue: 0
+    ResourceRegen:
+      statValue: 0
+    ManaRegen:
+      statValue: 0
+    AttackDamage:
+      statValue: 0
+    MagicPower:
+      statValue: 0
+    PhysicalDef:
+      statValue: 0
+    MagicalDef:
+      statValue: 0
+    AttackSpeed:
+      statValue: 0
+    MovementSpeed:
+      statValue: 0
+    Strenght:
+      statValue: 0
+    Inteligence:
+      statValue: 0
+    Dexterity:
+      statValue: 0
+    Thoughtness:
+      statValue: 0
+    LifeSteal:
+      statValue: 0
+    CriticalChance:
+      statValue: 0
+    CooldownReduction:
+      statValue: 0
+  statValues: []
+--- !u!114 &-6530737234853933940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627829766209904171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bebc5e2e531cae43bc288724afc89e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnIncreaseValue:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDecreaseValue:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBeforeHeal:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBeforeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBeforeKill:
+    m_PersistentCalls:
+      m_Calls: []
+  OnKilled:
+    m_PersistentCalls:
+      m_Calls: []

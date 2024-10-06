@@ -1,7 +1,10 @@
 using System;
+using Character.Bullet;
 using UnityEngine;
 using WRA.CharacterSystems.StatisticsSystem.Controlers;
 using WRA.CharacterSystems.StatisticsSystem.Statistics;
+using WRA.General.Patterns.Pool;
+using Zenject;
 
 namespace Character.Behaviours
 {
@@ -13,6 +16,8 @@ namespace Character.Behaviours
         private DynamicStatisticValue rotationSpeed;
         
         private Collider2D[] enemiesInRange;
+        
+        [Inject] private PoolBase<Pool.Bullet> bulletPool;
 
         private void Awake()
         {
