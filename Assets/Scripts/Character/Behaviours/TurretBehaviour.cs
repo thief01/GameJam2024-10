@@ -99,8 +99,8 @@ namespace Character.Behaviours
             bullet.transform.rotation = transform.rotation;
             bullet.gameObject.SetActive(true);
             attackCooldown = 1 / attackSpeed.Value;
-            
-            bullet.set
+
+            bullet.SetTarget(target, dynamicStatisticsController.GetStatistic("Damage").Value);
         }
         
         private Collider2D GetClosestEnemy()
