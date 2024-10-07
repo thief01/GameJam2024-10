@@ -85,7 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStatistics:
   - StatisticName: Speed
-    Value: 7
+    Value: 14
   - StatisticName: AttackRange
     Value: 0.1
 --- !u!58 &-9137109046107254957
