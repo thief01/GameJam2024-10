@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Character.Behaviours;
 using Pool.Objects;
 using UnityEngine;
 using UnityEngine.Splines;
@@ -86,6 +87,8 @@ namespace Pool.Spawners
             // Spawn enemy
             var spawnedEnemy = enemyPool.SpawnObject(enemy);
             spawnedEnemy.transform.position = transform.position;
+            var enemyBehaviour = spawnedEnemy.GetComponent<EnemyBehaviour>();
+            enemyBehaviour.SetSpline(spline);
 
         }
     }
