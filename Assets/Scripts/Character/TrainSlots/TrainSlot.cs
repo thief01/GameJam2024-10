@@ -18,8 +18,9 @@ namespace Character.TrainSlots
         
         public void OnClick()
         {
-            var openedPanel = panelManager.GetPanels().Find(ctg => ctg is InfoPanelBase);
-            panelManager.ClosePanel(openedPanel.name);
+            var openedPanel = panelManager.GetPanels().Find(ctg => ctg.Fragments.Exists(ctg2 =>  ctg2 is InfoPanelBase) );
+            if(openedPanel!=null)
+                panelManager.ClosePanel(openedPanel.name);
             
             var panelToOpen = "TurretPanel";
             if (turretAttached == null)

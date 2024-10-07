@@ -1,10 +1,9 @@
-using WRA.General.Patterns.Pool;
+﻿using WRA.General.Patterns.Pool;
 
 namespace Pool.Objects
 {
-    public class Turret : PoolObjectBase
+    public class Enemy : PoolObjectBase
     {
-
         public override void OnInit()
         {
             
