@@ -34,18 +34,6 @@ namespace Pool.Objects
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.gameObject.layer != enemyLayer)
-                return;
-            var enemy = other.GetComponent<IDamageable>();
-            if (enemy != null)
-            {
-                enemy.DealDamage(new DamageInfo() { CalculatedValueChanged = damage});
-            }
-            Kill();
-        }
-
         public override void OnInit()
         {
             
