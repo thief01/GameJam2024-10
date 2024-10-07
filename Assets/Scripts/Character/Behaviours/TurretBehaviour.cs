@@ -1,6 +1,7 @@
 using System;
 using Character.Bullet;
 using UnityEngine;
+using UnityEngine.Events;
 using WRA.CharacterSystems;
 using WRA.CharacterSystems.StatisticsSystem.Controlers;
 using WRA.CharacterSystems.StatisticsSystem.Statistics;
@@ -11,6 +12,8 @@ namespace Character.Behaviours
 {
     public class TurretBehaviour : CharacterSystemBase
     {
+        public UnityEvent OnShoot;
+        public float AttackCooldownPercentage => attackCooldown / (1 / attackSpeed.Value);
         [SerializeField] private LayerMask enemyLayer;
         [SerializeField] private int bulletId;
         [SerializeField] private Transform muzzle;
@@ -101,6 +104,7 @@ namespace Character.Behaviours
             attackCooldown = 1 / attackSpeed.Value;
 
             bullet.SetTarget(target, dynamicStatisticsController.GetStatistic("Damage").Value);
+            OnShoot.Invoke();
         }
         
         private Collider2D GetClosestEnemy()

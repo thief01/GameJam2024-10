@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2480833127602999151}
   - component: {fileID: 3765578537056334732}
+  - component: {fileID: 7114652670575186093}
   m_Layer: 0
   m_Name: FrontMarker
   m_TagString: Untagged
@@ -87,6 +88,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7114652670575186093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111562701632652856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e120897e205ca74eacc927213565f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretBehaviour: {fileID: 7220559653231848925}
+  maxRecoil: 0.3
+  recoilSpeed: 5
 --- !u!1001 &1990265816797153290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106,6 +122,14 @@ PrefabInstance:
     - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
       propertyPath: baseStatistics.Array.size
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[0].Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[2].Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
       propertyPath: baseStatistics.Array.data[6].Value
@@ -153,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6157926243225681553, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.92
+      value: 4.08
       objectReference: {fileID: 0}
     - target: {fileID: 6157926243225681553, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -242,13 +266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeedeb28b11ab648aa3603bd869361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnKillEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSpawnEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _variantId: 0
 --- !u!114 &7220559653231848925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,10 +278,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6338fddc73eec4aaf541e7f4df09ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnShoot:
+    m_PersistentCalls:
+      m_Calls: []
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
-  bulletId: 0
+  bulletId: 1
   muzzle: {fileID: 2480833127602999151}
 --- !u!4 &6831191058354522915 stripped
 Transform:
