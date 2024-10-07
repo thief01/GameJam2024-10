@@ -29,7 +29,7 @@ namespace Character.Behaviours
         private float attackCooldown;
         
         private bool rotatedTowardsEnemy;
-        private Transform target;
+        private Collider2D target;
 
 
         private void Awake()
@@ -83,9 +83,11 @@ namespace Character.Behaviours
                 target = null;
                 return;
             }
-            target = closestEnemy.transform;
+            target = closestEnemy;
             
-            var direction = (closestEnemy.transform.position - transform.position).normalized;
+            
+            var position2D = new Vector2(transform.position.x, transform.position.y);
+            var direction = (closestEnemy.ClosestPoint(transform.position) - position2D).normalized;
             var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             var rotation = Quaternion.Euler(new Vector3(0, 0, angle));
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotationSpeed.Value * Time.deltaTime);

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using WRA.CharacterSystems.StatisticsSystem.Controlers;
 using WRA.CharacterSystems.StatisticsSystem.Interfaces;
@@ -13,7 +14,7 @@ namespace Pool.Objects
         protected DynamicStatisticValue speed;
         protected DynamicStatisticValue attackRange;
         protected LayerMask enemyLayer;
-        protected Transform target;
+        protected Collider2D target;
         protected float damage;
         
         private void Awake()
@@ -32,7 +33,19 @@ namespace Pool.Objects
                 Kill();
             }
         }
-        
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.layer != enemyLayer)
+                return;
+            var enemy = other.GetComponent<IDamageable>();
+            if (enemy != null)
+            {
+                enemy.DealDamage(new DamageInfo() { CalculatedValueChanged = damage});
+            }
+            Kill();
+        }
+
         public override void OnInit()
         {
             
@@ -107,7 +120,7 @@ namespace Pool.Objects
         }
 
 
-        public virtual void SetTarget(Transform target, float damage, LayerMask layerMask)
+        public virtual void SetTarget(Collider2D target, float damage, LayerMask layerMask)
         {
             this.target = target;
             this.damage = damage;
