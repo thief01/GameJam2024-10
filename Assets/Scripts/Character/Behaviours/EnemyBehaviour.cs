@@ -50,6 +50,11 @@ namespace Character.Behaviours
             
             var point = splineContainer.EvaluatePosition(delta);
             transform.position = Vector3.MoveTowards(transform.position, point, speed.Value);
+
+            if (Vector3.Distance(point, transform.position) < 0.1f)
+            {
+                reachedStart = true;
+            }
         }
     }
 }
