@@ -18,7 +18,7 @@ namespace Character.Behaviours
         private void Awake()
         {
             dynamicStatisticsController = GetCharacterSystem<DynamicStatisticsController>();
-            speed = dynamicStatisticsController.GetStatistic("Speed");
+            speed = dynamicStatisticsController.GetStatistic("MovementSpeed");
         }
 
         private void OnEnable()
