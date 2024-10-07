@@ -22,6 +22,8 @@ namespace Pool.Objects
             dynamicStatisticsController = GetComponent<DynamicStatisticsController>();
             speed = dynamicStatisticsController.GetStatistic("Speed");
             attackRange = dynamicStatisticsController.GetStatistic("AttackRange");
+            if(attackRange.Value <= 0.1f)
+                attackRange.Value = 0.1f;
         }
 
         private void Update()

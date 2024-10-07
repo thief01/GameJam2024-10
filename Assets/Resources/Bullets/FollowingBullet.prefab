@@ -87,7 +87,7 @@ MonoBehaviour:
   - StatisticName: Speed
     Value: 3
   - StatisticName: AttackRange
-    Value: 0
+    Value: 0.1
 --- !u!50 &596218225951537095
 Rigidbody2D:
   serializedVersion: 4

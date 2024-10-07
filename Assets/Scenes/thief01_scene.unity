@@ -384,6 +384,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 16, y: 2.5}
   m_EdgeRadius: 0
+--- !u!50 &1378244218
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378244210}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1001 &1603614480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -655,6 +682,10 @@ PrefabInstance:
       propertyPath: baseStatistics.Array.data[0].Value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8147511771644144263, guid: d8a907b2a7dbdfa43a53fedb1d256252, type: 3}
+      propertyPath: baseStatistics.Array.data[1].Value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8627829766209904171, guid: d8a907b2a7dbdfa43a53fedb1d256252, type: 3}
       propertyPath: m_Name
       value: EnemyCharacter
@@ -800,6 +831,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3298430494575151191, guid: ffc18c49531fd0f499b2c626d9647478, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1378244217}
+    - targetCorrespondingSourceObject: {fileID: 3298430494575151191, guid: ffc18c49531fd0f499b2c626d9647478, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1378244218}
   m_SourcePrefab: {fileID: 100100000, guid: ffc18c49531fd0f499b2c626d9647478, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

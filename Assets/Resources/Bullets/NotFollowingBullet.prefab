@@ -87,7 +87,7 @@ MonoBehaviour:
   - StatisticName: Speed
     Value: 7
   - StatisticName: AttackRange
-    Value: 0
+    Value: 0.1
 --- !u!58 &-9137109046107254957
 CircleCollider2D:
   m_ObjectHideFlags: 0
