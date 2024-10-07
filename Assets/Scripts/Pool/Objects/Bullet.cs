@@ -12,6 +12,8 @@ namespace Pool.Objects
         protected DynamicStatisticsController dynamicStatisticsController;
         protected DynamicStatisticValue speed;
         protected DynamicStatisticValue attackRange;
+        protected LayerMask enemyLayer;
+        protected Transform target;
         protected float damage;
         
         private void Awake()
@@ -48,7 +50,7 @@ namespace Pool.Objects
 
         public override void OnKill()
         {
-            var colliders = Physics2D.OverlapCircleAll(transform.position, attackRange.Value);
+            var colliders = Physics2D.OverlapCircleAll(transform.position, attackRange.Value, enemyLayer);
             foreach (var collider in colliders)
             {
                 var enemy = collider.GetComponent<IDamageable>();
@@ -103,9 +105,14 @@ namespace Pool.Objects
         {
             return Vector3.Distance(transform.position, GetTargetPosition()) <= attackRange.Value;
         }
-        
-        
-        public abstract void SetTarget(Transform target, float damage);
+
+
+        public virtual void SetTarget(Transform target, float damage, LayerMask layerMask)
+        {
+            this.target = target;
+            this.damage = damage;
+            enemyLayer = layerMask;
+        }
         protected abstract Vector3 GetTargetPosition();
     }
 }

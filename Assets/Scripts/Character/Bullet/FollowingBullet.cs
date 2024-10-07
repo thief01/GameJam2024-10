@@ -7,13 +7,12 @@ namespace Character.Bullet
 {
     public class FollowingBullet : Pool.Objects.Bullet
     {
-        private Transform target;
         private Vector3 lastTargetPosition;
         
-        public override void SetTarget(Transform target, float damage)
+        public override void SetTarget(Transform target, float damage, LayerMask enemyLayer)
         {
-            this.target = target;
-            this.damage = damage;
+            base.SetTarget(target, damage, base.enemyLayer);
+            lastTargetPosition = target.position;
         }
 
         protected override Vector3 GetTargetPosition()

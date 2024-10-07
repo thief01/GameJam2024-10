@@ -8,10 +8,10 @@ namespace Character.Bullet
     {
         private Vector3 target;
 
-        public override void SetTarget(Transform target, float damage)
+        public override void SetTarget(Transform target, float damage, LayerMask enemyLayer)
         {
+            base.SetTarget(target, damage, enemyLayer);
             this.target = target.position;
-            this.damage = damage;
         }
 
         protected override Vector3 GetTargetPosition()
