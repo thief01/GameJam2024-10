@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3507815321806280923, guid: 32399c97806279548a658fa3b2c5f35b, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7301662828731093657, guid: 32399c97806279548a658fa3b2c5f35b, type: 3}
       propertyPath: healthSystemBaseController
       value: 

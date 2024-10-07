@@ -1175,6 +1175,10 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7301662828731093657, guid: 32399c97806279548a658fa3b2c5f35b, type: 3}
+      propertyPath: healthSystemBaseController
+      value: 
+      objectReference: {fileID: 3850447099758215492}
     - target: {fileID: 8236500407337636411, guid: 32399c97806279548a658fa3b2c5f35b, type: 3}
       propertyPath: m_IsActive
       value: 0
