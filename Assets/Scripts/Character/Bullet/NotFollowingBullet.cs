@@ -11,6 +11,11 @@ namespace Character.Bullet
 
         public override void SetTarget(Collider2D target, float damage, LayerMask enemyLayer, CharacterSystemBase owner)
         {
+            if (target == null)
+            {
+                Kill();
+                return;
+            }
             base.SetTarget(target, damage, enemyLayer, owner);
             this.target = target.ClosestPoint(transform.position);
         }
