@@ -100,6 +100,8 @@ namespace Character.Behaviours
         {
             if (!rotatedTowardsEnemy)
                 return;
+            if (target == null)
+                return;
             var bullet = bulletPool.SpawnObject(bulletId) as Pool.Objects.Bullet;
             bullet.transform.position = muzzle.position;
             bullet.transform.rotation = transform.rotation;

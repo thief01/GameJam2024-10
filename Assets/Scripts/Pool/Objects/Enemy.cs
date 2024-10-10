@@ -1,6 +1,7 @@
 ﻿using System;
 using Character.Behaviours;
 using WRA.CharacterSystems.StatisticsSystem.Controllers;
+using WRA.CharacterSystems.StatisticsSystem.ResourcesInfos;
 using WRA.General.Patterns.Pool;
 
 namespace Pool.Objects
@@ -26,6 +27,7 @@ namespace Pool.Objects
         {
             gameObject.SetActive(true);
             enemyBehaviour.OnSpawn();
+            healthSystemBaseController.Heal(new HealInfo() {HealValue = healthSystemBaseController.MaxValueStatistic.Value});
         }
 
         public override void OnBeginKill(float delay)
