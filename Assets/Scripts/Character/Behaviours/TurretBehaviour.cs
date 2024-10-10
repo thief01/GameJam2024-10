@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using WRA.CharacterSystems;
 using WRA.CharacterSystems.StatisticsSystem.Controlers;
+using WRA.CharacterSystems.StatisticsSystem.Controllers;
 using WRA.CharacterSystems.StatisticsSystem.Statistics;
 using WRA.General.Patterns.Pool;
 using Zenject;
@@ -116,7 +117,8 @@ namespace Character.Behaviours
             foreach (var enemy in enemiesInRange)
             {
                 var distance = Vector2.Distance(transform.position, enemy.transform.position);
-                if (distance < closestDistance)
+                var healthSystemBaseController = enemy.GetComponent<HealthSystemBaseController>();
+                if (distance < closestDistance && healthSystemBaseController.Alive)
                 {
                     closestDistance = distance;
                     closestEnemy = enemy;
