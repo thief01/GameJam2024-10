@@ -37,6 +37,12 @@ namespace Character.Behaviours
             }
             Move();
         }
+        
+        public void OnSpawn()
+        {
+            reachedStart = false;
+            delta = 0;
+        }
 
         public void SetSpline(SplineContainer splineContainer)
         {

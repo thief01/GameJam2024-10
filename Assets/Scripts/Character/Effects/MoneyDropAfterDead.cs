@@ -18,7 +18,7 @@ namespace Character.Effects
         
         void DropMoney(KillInfo killInfo)
         {
-            killInfo.Owner.GetComponent<MoneyController>().AddMoney(moneyAmount);
+            MoneyController.Instance.AddMoney(moneyAmount);
         }
     }
 }

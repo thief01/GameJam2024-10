@@ -8,6 +8,7 @@ namespace Character.Controllers
 {
     public class MoneyController : CharacterSystemBase
     {
+        public static MoneyController Instance { get; private set; }
         public int Money
         {
             get => money;
@@ -20,6 +21,17 @@ namespace Character.Controllers
         [SerializeField] private int money = 100;
 
         [Inject] private PanelManager panelManager;
+
+        private void Awake()
+        {
+            if (Instance != null)
+            {
+                Destroy(this);
+                return;
+            }
+            Instance = this;
+        }
+
         private void Start()
         {
             panelManager.OpenPanel("PlayerView", new PanelDataBase() {Data = this});
