@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5450786937723539408
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[0].StatisticName
+      value: AttackSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[1].StatisticName
+      value: DamageArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[2].StatisticName
+      value: Damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[3].StatisticName
+      value: DamageMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[4].StatisticName
+      value: CritMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[5].StatisticName
+      value: CritChance
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[6].StatisticName
+      value: AttackRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[7].StatisticName
+      value: MovementSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[8].StatisticName
+      value: MaxHealth
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[9].StatisticName
+      value: Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[10].StatisticName
+      value: MaxShield
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189575135986553457, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: baseStatistics.Array.data[11].StatisticName
+      value: AbilityHaste
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668027156207216349, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: m_Name
+      value: PlayerCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157926243225681553, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157926243225681553, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157926243225681553, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157926243225681553, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157926243225681553, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157926243225681553, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157926243225681553, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157926243225681553, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157926243225681553, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157926243225681553, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5668027156207216349, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5996671171065634166}
+  m_SourcePrefab: {fileID: 100100000, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+--- !u!1 &364217058476845325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5668027156207216349, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+  m_PrefabInstance: {fileID: 5450786937723539408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5996671171065634166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364217058476845325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d4115dd4d0ab747829d2e3a672c224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnKillEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSpawnEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _variantId: 0
