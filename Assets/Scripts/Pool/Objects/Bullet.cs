@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using WRA.CharacterSystems;
 using WRA.CharacterSystems.StatisticsSystem.Controlers;
 using WRA.CharacterSystems.StatisticsSystem.Interfaces;
 using WRA.CharacterSystems.StatisticsSystem.ResourcesInfos;
@@ -13,6 +14,7 @@ namespace Pool.Objects
         protected DynamicStatisticsController dynamicStatisticsController;
         protected DynamicStatisticValue speed;
         protected DynamicStatisticValue attackRange;
+        protected CharacterSystemBase owner;
         protected LayerMask enemyLayer;
         protected Collider2D target;
         protected float damage;
@@ -59,7 +61,7 @@ namespace Pool.Objects
                 var enemy = collider.GetComponent<IDamageable>();
                 if (enemy != null)
                 {
-                    enemy.DealDamage(new DamageInfo() { CalculatedValueChanged = damage});
+                    enemy.DealDamage(new DamageInfo() { Owner = owner, CalculatedValueChanged = damage});
                 }
             }
         }
@@ -110,11 +112,12 @@ namespace Pool.Objects
         }
 
 
-        public virtual void SetTarget(Collider2D target, float damage, LayerMask layerMask)
+        public virtual void SetTarget(Collider2D target, float damage, LayerMask layerMask, CharacterSystemBase owner)
         {
             this.target = target;
             this.damage = damage;
             enemyLayer = layerMask;
+            this.owner = owner;
         }
         protected abstract Vector3 GetTargetPosition();
     }

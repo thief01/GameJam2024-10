@@ -106,7 +106,7 @@ namespace Character.Behaviours
             bullet.gameObject.SetActive(true);
             attackCooldown = 1 / attackSpeed.Value;
 
-            bullet.SetTarget(target, dynamicStatisticsController.GetStatistic("Damage").Value, enemyLayer);
+            bullet.SetTarget(target, dynamicStatisticsController.GetStatistic("Damage").Value, enemyLayer, this);
             OnShoot.Invoke();
         }
         

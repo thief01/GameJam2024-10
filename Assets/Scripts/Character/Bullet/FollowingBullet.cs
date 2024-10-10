@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using WRA.CharacterSystems;
 using WRA.CharacterSystems.StatisticsSystem.Controlers;
 using WRA.CharacterSystems.StatisticsSystem.Statistics;
 
@@ -9,9 +10,9 @@ namespace Character.Bullet
     {
         private Vector3 lastTargetPosition;
         
-        public override void SetTarget(Collider2D target, float damage, LayerMask enemyLayer)
+        public override void SetTarget(Collider2D target, float damage, LayerMask enemyLayer, CharacterSystemBase owner)
         {
-            base.SetTarget(target, damage, base.enemyLayer);
+            base.SetTarget(target, damage, base.enemyLayer, owner);
             lastTargetPosition = target.ClosestPoint(transform.position);
         }
 
