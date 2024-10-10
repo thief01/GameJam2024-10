@@ -27,7 +27,7 @@ namespace Pool.Objects
         {
             gameObject.SetActive(true);
             enemyBehaviour.OnSpawn();
-            healthSystemBaseController.Heal(new HealInfo() {HealValue = healthSystemBaseController.MaxValueStatistic.Value});
+            healthSystemBaseController.Heal(new HealInfo() {CalculatedValueChanged = healthSystemBaseController.MaxValueStatistic.Value});
         }
 
         public override void OnBeginKill(float delay)
