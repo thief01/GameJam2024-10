@@ -513,6 +513,8 @@ MonoBehaviour:
     Value: 0
   - StatisticName: Shield
     Value: 0
+  - StatisticName: MovementSpeed
+    Value: 2
 --- !u!1001 &6404759444630979913
 PrefabInstance:
   m_ObjectHideFlags: 0

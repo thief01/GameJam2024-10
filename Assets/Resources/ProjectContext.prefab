@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
       propertyPath: statisticInfos.Array.size
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
       propertyPath: statisticInfos.Array.data[0].statisticName
@@ -254,11 +254,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
       propertyPath: statisticInfos.Array.data[13].StatisticColor.g
-      value: 1
+      value: 0.927191
       objectReference: {fileID: 0}
     - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
       propertyPath: statisticInfos.Array.data[13].StatisticColor.r
-      value: 0.2090857
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 697971256893604891, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
       propertyPath: _monoInstallers.Array.size
