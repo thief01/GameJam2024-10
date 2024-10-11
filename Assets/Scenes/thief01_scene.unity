@@ -729,6 +729,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2606411463524473739, guid: ffc18c49531fd0f499b2c626d9647478, type: 3}
+      propertyPath: baseStatistics.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606411463524473739, guid: ffc18c49531fd0f499b2c626d9647478, type: 3}
+      propertyPath: baseStatistics.Array.data[0].Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606411463524473739, guid: ffc18c49531fd0f499b2c626d9647478, type: 3}
+      propertyPath: baseStatistics.Array.data[1].Value
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606411463524473739, guid: ffc18c49531fd0f499b2c626d9647478, type: 3}
+      propertyPath: baseStatistics.Array.data[0].StatisticName
+      value: DamageReduction
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606411463524473739, guid: ffc18c49531fd0f499b2c626d9647478, type: 3}
+      propertyPath: baseStatistics.Array.data[1].StatisticName
+      value: Health
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606411463524473739, guid: ffc18c49531fd0f499b2c626d9647478, type: 3}
+      propertyPath: baseStatistics.Array.data[2].StatisticName
+      value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606411463524473739, guid: ffc18c49531fd0f499b2c626d9647478, type: 3}
+      propertyPath: baseStatistics.Array.data[3].StatisticName
+      value: DamageReduction
+      objectReference: {fileID: 0}
     - target: {fileID: 3298430494575151191, guid: ffc18c49531fd0f499b2c626d9647478, type: 3}
       propertyPath: m_Name
       value: TrainCharacter

@@ -8,6 +8,258 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[0].statisticName
+      value: AttackSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[1].statisticName
+      value: DamageArea
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[2].statisticName
+      value: Damage
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[3].statisticName
+      value: DamageMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[4].statisticName
+      value: CritMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[5].statisticName
+      value: CritChance
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[6].statisticName
+      value: AtackRange
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[7].statisticName
+      value: Health
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[8].statisticName
+      value: DamageReduction
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[9].statisticName
+      value: RotationSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[10].statisticName
+      value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[11].statisticName
+      value: AbilityHaste
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[12].statisticName
+      value: Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[13].statisticName
+      value: MovementSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[0].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[0].StatisticColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[0].StatisticColor.g
+      value: 0.9950111
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[0].StatisticColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[1].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[1].StatisticColor.b
+      value: 0.6806264
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[1].StatisticColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[1].StatisticColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[2].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[2].StatisticColor.b
+      value: 0.16235352
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[2].StatisticColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[2].StatisticColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[3].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[3].StatisticColor.b
+      value: 0.16235352
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[3].StatisticColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[4].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[4].StatisticColor.b
+      value: 0.16235352
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[4].StatisticColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[5].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[5].StatisticColor.b
+      value: 0.16235352
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[5].StatisticColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[6].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[6].StatisticColor.b
+      value: 0.65263987
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[6].StatisticColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[7].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[7].StatisticColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[7].StatisticColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[7].StatisticColor.r
+      value: 0.2090857
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[8].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[8].StatisticColor.g
+      value: 0.53390247
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[8].StatisticColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[9].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[9].StatisticColor.g
+      value: 0.7405456
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[9].StatisticColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[10].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[10].StatisticColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[10].StatisticColor.g
+      value: 0.50931454
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[10].StatisticColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[11].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[11].StatisticColor.b
+      value: 0.6628423
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[11].StatisticColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[11].StatisticColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[12].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[12].StatisticColor.g
+      value: 0.927191
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[12].StatisticColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[13].StatisticColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[13].StatisticColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
+      propertyPath: statisticInfos.Array.data[13].StatisticColor.r
+      value: 0.2090857
+      objectReference: {fileID: 0}
     - target: {fileID: 697971256893604891, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
       propertyPath: _monoInstallers.Array.size
       value: 4
@@ -74,7 +326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7535296146189128580, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
       propertyPath: m_Name
-      value: ProjectContext Variant
+      value: ProjectContext
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
