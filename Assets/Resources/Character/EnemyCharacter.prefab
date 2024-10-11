@@ -495,6 +495,24 @@ MonoBehaviour:
   baseStatistics:
   - StatisticName: Health
     Value: 100
+  - StatisticName: AttackSpeed
+    Value: 1
+  - StatisticName: DamageArea
+    Value: 1
+  - StatisticName: Damage
+    Value: 2
+  - StatisticName: DamageMultiplier
+    Value: 0
+  - StatisticName: CritMultiplier
+    Value: 0
+  - StatisticName: CritChance
+    Value: 0
+  - StatisticName: AttackRange
+    Value: 5
+  - StatisticName: DamageReduction
+    Value: 0
+  - StatisticName: Shield
+    Value: 0
 --- !u!1001 &6404759444630979913
 PrefabInstance:
   m_ObjectHideFlags: 0

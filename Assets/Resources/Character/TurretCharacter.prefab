@@ -333,6 +333,18 @@ MonoBehaviour:
     Value: 2
   - StatisticName: AttackRange
     Value: 7.5
+  - StatisticName: DamageArea
+    Value: 0
+  - StatisticName: DamageMultiplier
+    Value: 0
+  - StatisticName: CritMultiplier
+    Value: 0
+  - StatisticName: CritChance
+    Value: 0
+  - StatisticName: DamageReduction
+    Value: 0
+  - StatisticName: RotationSpeed
+    Value: 0
 --- !u!4 &6831191058354522915 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4995508090666730281, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}

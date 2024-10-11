@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
       propertyPath: statisticInfos.Array.data[6].statisticName
-      value: AtackRange
+      value: AttackRange
       objectReference: {fileID: 0}
     - target: {fileID: -7854137061038588418, guid: e4be0ed4b02dfb84e8272e873bc86809, type: 3}
       propertyPath: statisticInfos.Array.data[7].statisticName
