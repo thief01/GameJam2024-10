@@ -18,10 +18,14 @@ namespace Pool.Spawners
         
         private void Update()
         {
-            
+            spawnDelay -= Time.deltaTime;
+            if (spawnDelay <= 0)
+            {
+                SpawnUnit(spawnEnemies[UnityEngine.Random.Range(0, spawnEnemies.Count)]);
+                spawnDelay = 1;
+            }
         }
-
-
+        
         private void SpawnUnit(int id)
         {
             
