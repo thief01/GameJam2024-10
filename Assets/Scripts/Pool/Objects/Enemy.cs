@@ -11,10 +11,6 @@ namespace Pool.Objects
 {
     public class Enemy : CharacterObject
     {
-        public Transform Train => train;
-        
-        [Inject] private Transform train;
-        
         private HealthSystemBaseController healthSystemBaseController;
         private EnemyBehaviour enemyBehaviour;
         

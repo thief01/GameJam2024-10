@@ -7,6 +7,8 @@ namespace Pool.Spawners
 {
     public class TrainSpawner : MonoBehaviour
     {
+        public static Train Train { get; private set; } = null;
+        
         [Inject] private PoolBase<Train> trainPool;
         
         private void Start()
@@ -18,6 +20,7 @@ namespace Pool.Spawners
         {
             var spawnedTrain = trainPool.SpawnObject();
             spawnedTrain.transform.position = Vector3.zero;
+            Train = spawnedTrain.GetComponent<Train>();
         }
     
     }

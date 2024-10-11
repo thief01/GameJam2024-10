@@ -1,5 +1,6 @@
 using System;
 using Pool.Objects;
+using Pool.Spawners;
 using UnityEngine;
 using UnityEngine.Splines;
 using WRA.CharacterSystems;
@@ -32,7 +33,7 @@ namespace Character.Behaviours
         
         private void Move()
         {
-            var point = enemy.Train.position;
+            var point = TrainSpawner.Train.transform.position;
             if(Vector3.Distance(point, transform.position) > attackRange.Value - 0.5f)
             {
                 transform.position = Vector3.MoveTowards(transform.position, point, speed.Value);
