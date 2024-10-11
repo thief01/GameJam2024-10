@@ -9,7 +9,7 @@ using WRA.General.Patterns.Pool;
 
 namespace Pool.Objects
 {
-    public abstract class Bullet : PoolObjectBase
+    public abstract class Bullet : CharacterObject
     {
         protected DynamicStatisticsController dynamicStatisticsController;
         protected DynamicStatisticValue speed;

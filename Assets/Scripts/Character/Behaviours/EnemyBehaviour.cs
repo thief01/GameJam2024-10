@@ -4,62 +4,35 @@ using UnityEngine.Splines;
 using WRA.CharacterSystems;
 using WRA.CharacterSystems.StatisticsSystem.Controlers;
 using WRA.CharacterSystems.StatisticsSystem.Statistics;
+using Zenject;
 
 namespace Character.Behaviours
 {
     public class EnemyBehaviour : CharacterSystemBase
     {
-        private SplineContainer splineContainer;
         private DynamicStatisticsController dynamicStatisticsController;
         private DynamicStatisticValue speed;
-        private float delta=0;
-        private bool reachedStart = false;
+        private DynamicStatisticValue attackRange;
+        
+        [Inject] private Transform train;
         
         private void Awake()
         {
             dynamicStatisticsController = GetCharacterSystem<DynamicStatisticsController>();
             speed = dynamicStatisticsController.GetStatistic("MovementSpeed");
         }
-
-        private void OnEnable()
-        {
-            reachedStart=false;
-        }
-
+        
         private void Update()
         {
-            if (reachedStart)
-            {
-                var lenght = splineContainer.CalculateLength(0);
-                var deltaSpeed = speed.Value / lenght;
-
-                delta = Math.Clamp(delta + deltaSpeed * Time.deltaTime, 0, 1);
-            }
             Move();
-        }
-        
-        public void OnSpawn()
-        {
-            reachedStart = false;
-            delta = 0;
-        }
-
-        public void SetSpline(SplineContainer splineContainer)
-        {
-            this.splineContainer = splineContainer;
         }
         
         private void Move()
         {
-            if (splineContainer == null)
-                return;
-            
-            var point = splineContainer.EvaluatePosition(delta);
-            transform.position = Vector3.MoveTowards(transform.position, point, speed.Value);
-
-            if (Vector3.Distance(point, transform.position) < 0.1f)
+            var point = train.position;
+            if(Vector3.Distance(point, transform.position) > attackRange.Value - 0.5f)
             {
-                reachedStart = true;
+                transform.position = Vector3.MoveTowards(transform.position, point, speed.Value);
             }
         }
     }

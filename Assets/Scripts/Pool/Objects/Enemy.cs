@@ -1,12 +1,13 @@
 ﻿using System;
 using Character.Behaviours;
+using WRA.CharacterSystems;
 using WRA.CharacterSystems.StatisticsSystem.Controllers;
 using WRA.CharacterSystems.StatisticsSystem.ResourcesInfos;
 using WRA.General.Patterns.Pool;
 
 namespace Pool.Objects
 {
-    public class Enemy : PoolObjectBase
+    public class Enemy : CharacterObject
     {
         private HealthSystemBaseController healthSystemBaseController;
         private EnemyBehaviour enemyBehaviour;
@@ -26,7 +27,6 @@ namespace Pool.Objects
         public override void OnSpawn()
         {
             gameObject.SetActive(true);
-            enemyBehaviour.OnSpawn();
             healthSystemBaseController.Heal(new HealInfo() {CalculatedValueChanged = healthSystemBaseController.MaxValueStatistic.Value});
         }
 
