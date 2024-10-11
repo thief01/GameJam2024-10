@@ -1,4 +1,5 @@
 using System;
+using Pool.Objects;
 using UnityEngine;
 using UnityEngine.Splines;
 using WRA.CharacterSystems;
@@ -13,13 +14,15 @@ namespace Character.Behaviours
         private DynamicStatisticsController dynamicStatisticsController;
         private DynamicStatisticValue speed;
         private DynamicStatisticValue attackRange;
-        
-        [Inject] private Transform train;
+
+        private Enemy enemy;
         
         private void Awake()
         {
             dynamicStatisticsController = GetCharacterSystem<DynamicStatisticsController>();
             speed = dynamicStatisticsController.GetStatistic("MovementSpeed");
+            attackRange = dynamicStatisticsController.GetStatistic("AttackRange");
+            enemy = GetComponent<Enemy>();
         }
         
         private void Update()
@@ -29,7 +32,7 @@ namespace Character.Behaviours
         
         private void Move()
         {
-            var point = train.position;
+            var point = enemy.Train.position;
             if(Vector3.Distance(point, transform.position) > attackRange.Value - 0.5f)
             {
                 transform.position = Vector3.MoveTowards(transform.position, point, speed.Value);

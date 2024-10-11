@@ -21,18 +21,17 @@ namespace Pool.Spawners
             spawnDelay -= Time.deltaTime;
             if (spawnDelay <= 0)
             {
-                SpawnUnit(spawnEnemies[UnityEngine.Random.Range(0, spawnEnemies.Count)]);
                 spawnDelay = 1;
+                SpawnUnit(spawnEnemies[UnityEngine.Random.Range(0, spawnEnemies.Count)]);
+                
             }
         }
         
         private void SpawnUnit(int id)
         {
-            
-            // Spawn enemy
             var spawnedEnemy = enemyPool.SpawnObject(id);
             spawnedEnemy.transform.position = transform.position;
-            var enemyBehaviour = spawnedEnemy.GetComponent<EnemyBehaviour>();
+            // var enemyBehaviour = spawnedEnemy.GetComponent<EnemyBehaviour>();
         }
     }
 }
