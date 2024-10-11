@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStatistics:
-  - StatisticName: Health
+  - StatisticName: MaxHealth
     Value: 100
   - StatisticName: AttackSpeed
     Value: 1

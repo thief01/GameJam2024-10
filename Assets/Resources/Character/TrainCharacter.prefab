@@ -1464,7 +1464,7 @@ MonoBehaviour:
   baseStatistics:
   - StatisticName: DamageReduction
     Value: 0
-  - StatisticName: Health
+  - StatisticName: MaxHealth
     Value: 500
   - StatisticName: Shield
     Value: 0
