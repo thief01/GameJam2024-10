@@ -18,5 +18,10 @@ namespace Character
         {
             throw new System.NotImplementedException();
         }
+        
+        public void Upgrade()
+        {
+            
+        }
     }
 }
