@@ -13,7 +13,7 @@ namespace Pool.Objects
 
         public override void OnSpawn()
         {
-            
+            gameObject.SetActive(true);
         }
 
         public override void OnBeginKill(float delay)
