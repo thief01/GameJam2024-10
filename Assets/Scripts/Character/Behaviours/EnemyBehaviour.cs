@@ -36,7 +36,7 @@ namespace Character.Behaviours
             var point = TrainSpawner.Train.transform.position;
             if(Vector3.Distance(point, transform.position) > attackRange.Value - 0.5f)
             {
-                transform.position = Vector3.MoveTowards(transform.position, point, speed.Value);
+                transform.position = Vector3.MoveTowards(transform.position, point, speed.Value*Time.deltaTime);
             }
         }
     }

@@ -344,7 +344,7 @@ MonoBehaviour:
   - StatisticName: DamageReduction
     Value: 0
   - StatisticName: RotationSpeed
-    Value: 0
+    Value: 90
 --- !u!4 &6831191058354522915 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4995508090666730281, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
