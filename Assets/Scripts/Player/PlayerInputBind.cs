@@ -28,8 +28,8 @@ namespace Player
 
         private void OnLeftClick()
         {
+            TrainSpawner.Train.DeselectAllSlots();
             var mousePosition = Input.mousePosition;
-            Debug.Log(mousePosition);
             var colliders = Physics2D.OverlapPointAll(Camera.main.ScreenToWorldPoint(mousePosition));
             foreach (var collider in colliders)
             {
