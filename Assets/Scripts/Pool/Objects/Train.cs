@@ -51,6 +51,7 @@ namespace Pool.Objects
             {
                 trainSlot.DeselectSlot();
             }
+            selectedSlot = null;
         }
     }
 }
