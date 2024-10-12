@@ -11,6 +11,7 @@ namespace Character.TrainSlots
     public class TrainSlot : MonoBehaviour, IClickable
     {
         public TurretCharacter TurretAttached => turretAttached;
+        public bool IsSelected => isSelected;
         
         [SerializeField] private int sellPrice = 50;
         [SerializeField] private int buyPrice = 100;
@@ -18,10 +19,17 @@ namespace Character.TrainSlots
         
         [Inject] private PoolBase<Turret> turretPool;
         [Inject] private PanelManager panelManager;
+        [Inject] private Train train;
         
         private TurretCharacter turretAttached;
+        private bool isSelected;
         
         public void OnClick()
+        {
+            train.SelectSlot(this);
+        }
+
+        public void SelectSlot()
         {
             var openedPanel = panelManager.GetPanels().Find(ctg => ctg.Fragments.Exists(ctg2 =>  ctg2 is InfoPanelBase) );
             if(openedPanel!=null)
@@ -33,9 +41,28 @@ namespace Character.TrainSlots
                 panelToOpen = "ShopPanel";
             }
             panelManager.OpenPanel(panelToOpen, new PanelDataBase() { Data = this});
+            isSelected = true;
         }
         
-        public void AddTurret()
+        public void DeselectSlot()
+        {
+            panelManager.ClosePanel("TurretPanel");
+            panelManager.ClosePanel("ShopPanel");
+            isSelected = false;
+        }
+        
+        public void BuildOrUpgradeTurret()
+        {
+            if (turretAttached == null)
+            {
+                BuildTurret();
+                return;
+            }
+
+            UpgradeTurret();
+        }
+        
+        private void BuildTurret()
         {
             if(buyPrice > MoneyController.Instance.Money)
                 return;
@@ -47,7 +74,7 @@ namespace Character.TrainSlots
             OnClick();
         }
         
-        public void UpgradeTurret()
+        private void UpgradeTurret()
         {
             if(upgradePrice > MoneyController.Instance.Money)
                 return;
@@ -56,7 +83,7 @@ namespace Character.TrainSlots
             OnClick();
         }
         
-        public void RemoveTurret()
+        public void SellTurret()
         {
             MoneyController.Instance.AddMoney(sellPrice);
             turretAttached.GetComponent<Turret>().Kill();

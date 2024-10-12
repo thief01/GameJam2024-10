@@ -25,134 +25,58 @@ public partial class @GameControlls: IInputActionCollection2, IDisposable
     ""name"": ""GameControlls"",
     ""maps"": [
         {
-            ""name"": ""Game"",
+            ""name"": ""TowerDefense"",
             ""id"": ""3a6413bb-fce7-4434-a1b0-9694173f0e38"",
             ""actions"": [
                 {
-                    ""name"": ""Moving"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""d0e26967-cb9a-4042-adc7-d87fba405219"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""name"": ""TurretSelect"",
+                    ""type"": ""Button"",
+                    ""id"": ""6ff58909-9266-4534-81ca-2d0a91937576"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Skill1"",
+                    ""name"": ""TurretSelect1"",
                     ""type"": ""Button"",
-                    ""id"": ""0ab9a7c0-523a-44c9-a810-20c1c5d4f3e5"",
+                    ""id"": ""016c6444-3b15-4e8e-8baa-ead21be68560"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Skill2"",
+                    ""name"": ""TurretSelect2"",
                     ""type"": ""Button"",
-                    ""id"": ""d641a959-cf37-4962-b420-ca9ab76b083b"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""1922c3c5-4653-49bd-bfc6-160e229b6f3b"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Moving"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""c074f52d-b337-4745-be85-1e8325a8909a"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Moving"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""1f8260c7-e9a4-42a0-b830-98ee20a08e0a"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Moving"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""73880a50-2d59-4eac-ad46-380077e70306"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Moving"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""4c2d5013-f963-4640-bbd2-2e0c707691fd"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Moving"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2adec97c-9152-434e-a919-e143ca4408ed"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Skill1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ac22206f-6471-4440-a441-85c035e60f8c"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Skill2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""General"",
-            ""id"": ""92b64463-4de3-4a8e-babe-be4389f1c76f"",
-            ""actions"": [
-                {
-                    ""name"": ""LMB"",
-                    ""type"": ""Button"",
-                    ""id"": ""df3a1625-fd9f-4d8a-81f0-d20879a48d99"",
+                    ""id"": ""ed2ef37f-d1c7-4e02-ae23-3a1e4ddae3f7"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""RMB"",
+                    ""name"": ""TurretSelect3"",
                     ""type"": ""Button"",
-                    ""id"": ""ffb86c1b-c0e0-4ca9-b860-ad4663b297f8"",
+                    ""id"": ""0a8610f6-ee6e-40b7-b031-63b32fed3a43"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Sell"",
+                    ""type"": ""Button"",
+                    ""id"": ""58ed07c1-76cc-41ab-9bd9-9f2d27b90079"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BuyOrUpgrade"",
+                    ""type"": ""Button"",
+                    ""id"": ""8d651f76-83c6-4f31-8d0d-1e089e2e0c3c"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -161,8 +85,26 @@ public partial class @GameControlls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""MousePosition"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""1ff32033-61ce-4283-afd7-4b44acad61b5"",
+                    ""id"": ""d0f1a273-685f-4de5-b488-bc8ef43c96f9"",
                     ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LMB"",
+                    ""type"": ""Button"",
+                    ""id"": ""76d32292-5623-4de3-b68b-98cf18f3ce23"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RMB"",
+                    ""type"": ""Button"",
+                    ""id"": ""95f31a7e-3ac5-456f-ab04-5096c9ee69ab"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -171,7 +113,73 @@ public partial class @GameControlls: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""a47aed06-0519-4b13-886a-26c7bc1e302e"",
+                    ""id"": ""6dbfd046-d169-42ec-bdfd-200ee23dfe79"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TurretSelect1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""40db1bd3-d1af-4744-880a-b836f296d363"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TurretSelect2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5a89568e-b192-45f3-88e2-03156e156c29"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TurretSelect3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""804acd42-eb49-46d7-89bb-536e7ccc0020"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sell"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c3ae0b91-f409-4b69-84d1-07b8b3fb8ac1"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BuyOrUpgrade"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7f2f14b8-15fb-4e62-a169-901728c2224d"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MousePosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7cd6acaa-2300-4760-b0e5-9fca03e90ecb"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -182,7 +190,7 @@ public partial class @GameControlls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ea7f3633-7bbf-45b7-a443-5bc98abac32c"",
+                    ""id"": ""29ec2e5d-223b-4bf1-875a-8ecc584f0be6"",
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -193,35 +201,204 @@ public partial class @GameControlls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""bb5d773f-4fa5-4e31-b5a2-4882fcfd9809"",
-                    ""path"": ""<Mouse>/delta"",
+                    ""id"": ""33711d6c-68c0-4d60-901c-960b6f5ffe7e"",
+                    ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MousePosition"",
+                    ""action"": ""TurretSelect"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Roguelike"",
+            ""id"": ""512bcf99-676e-4277-b141-76d27419a414"",
+            ""actions"": [
+                {
+                    ""name"": ""Moving"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""1449973a-b0d6-40d2-bb0d-88b9cd623e9d"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skill1"",
+                    ""type"": ""Button"",
+                    ""id"": ""990323a3-8ff4-4f8d-aa73-65821616686d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Skill2"",
+                    ""type"": ""Button"",
+                    ""id"": ""a5737ada-e89c-4168-944e-3cc29099a564"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""8a702e7f-6138-48c3-8166-9972457a4775"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Attack2"",
+                    ""type"": ""Button"",
+                    ""id"": ""7dadd29a-b9a6-47fb-a024-f802da69e4a5"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""00113507-be41-4271-9d03-47af2a369ec0"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Moving"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""22f02e14-4795-4a9c-b6d9-27eb584730c0"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Moving"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""f667abf9-4f81-4215-b83b-ba38bd59bbf5"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Moving"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""148d53ac-141a-412d-a47c-9a142e072631"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Moving"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""5562dca3-b097-4441-88b8-2d3123580dd2"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Moving"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d17bdf39-405c-4a13-b5d6-775294f7179e"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""898d8248-9364-4daf-986f-a336ff07484d"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a0cdc5c9-69f3-4244-811d-9aab4559abfd"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""702835f2-bb2f-4bd6-8bfc-a8d5f3e79b3b"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""General"",
+            ""id"": ""92b64463-4de3-4a8e-babe-be4389f1c76f"",
+            ""actions"": [],
+            ""bindings"": []
         }
     ],
     ""controlSchemes"": []
 }");
-        // Game
-        m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
-        m_Game_Moving = m_Game.FindAction("Moving", throwIfNotFound: true);
-        m_Game_Skill1 = m_Game.FindAction("Skill1", throwIfNotFound: true);
-        m_Game_Skill2 = m_Game.FindAction("Skill2", throwIfNotFound: true);
+        // TowerDefense
+        m_TowerDefense = asset.FindActionMap("TowerDefense", throwIfNotFound: true);
+        m_TowerDefense_TurretSelect = m_TowerDefense.FindAction("TurretSelect", throwIfNotFound: true);
+        m_TowerDefense_TurretSelect1 = m_TowerDefense.FindAction("TurretSelect1", throwIfNotFound: true);
+        m_TowerDefense_TurretSelect2 = m_TowerDefense.FindAction("TurretSelect2", throwIfNotFound: true);
+        m_TowerDefense_TurretSelect3 = m_TowerDefense.FindAction("TurretSelect3", throwIfNotFound: true);
+        m_TowerDefense_Sell = m_TowerDefense.FindAction("Sell", throwIfNotFound: true);
+        m_TowerDefense_BuyOrUpgrade = m_TowerDefense.FindAction("BuyOrUpgrade", throwIfNotFound: true);
+        m_TowerDefense_MousePosition = m_TowerDefense.FindAction("MousePosition", throwIfNotFound: true);
+        m_TowerDefense_LMB = m_TowerDefense.FindAction("LMB", throwIfNotFound: true);
+        m_TowerDefense_RMB = m_TowerDefense.FindAction("RMB", throwIfNotFound: true);
+        // Roguelike
+        m_Roguelike = asset.FindActionMap("Roguelike", throwIfNotFound: true);
+        m_Roguelike_Moving = m_Roguelike.FindAction("Moving", throwIfNotFound: true);
+        m_Roguelike_Skill1 = m_Roguelike.FindAction("Skill1", throwIfNotFound: true);
+        m_Roguelike_Skill2 = m_Roguelike.FindAction("Skill2", throwIfNotFound: true);
+        m_Roguelike_Attack = m_Roguelike.FindAction("Attack", throwIfNotFound: true);
+        m_Roguelike_Attack2 = m_Roguelike.FindAction("Attack2", throwIfNotFound: true);
         // General
         m_General = asset.FindActionMap("General", throwIfNotFound: true);
-        m_General_LMB = m_General.FindAction("LMB", throwIfNotFound: true);
-        m_General_RMB = m_General.FindAction("RMB", throwIfNotFound: true);
-        m_General_MousePosition = m_General.FindAction("MousePosition", throwIfNotFound: true);
     }
 
     ~@GameControlls()
     {
-        Debug.Assert(!m_Game.enabled, "This will cause a leak and performance issues, GameControlls.Game.Disable() has not been called.");
+        Debug.Assert(!m_TowerDefense.enabled, "This will cause a leak and performance issues, GameControlls.TowerDefense.Disable() has not been called.");
+        Debug.Assert(!m_Roguelike.enabled, "This will cause a leak and performance issues, GameControlls.Roguelike.Disable() has not been called.");
         Debug.Assert(!m_General.enabled, "This will cause a leak and performance issues, GameControlls.General.Disable() has not been called.");
     }
 
@@ -281,28 +458,142 @@ public partial class @GameControlls: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Game
-    private readonly InputActionMap m_Game;
-    private List<IGameActions> m_GameActionsCallbackInterfaces = new List<IGameActions>();
-    private readonly InputAction m_Game_Moving;
-    private readonly InputAction m_Game_Skill1;
-    private readonly InputAction m_Game_Skill2;
-    public struct GameActions
+    // TowerDefense
+    private readonly InputActionMap m_TowerDefense;
+    private List<ITowerDefenseActions> m_TowerDefenseActionsCallbackInterfaces = new List<ITowerDefenseActions>();
+    private readonly InputAction m_TowerDefense_TurretSelect;
+    private readonly InputAction m_TowerDefense_TurretSelect1;
+    private readonly InputAction m_TowerDefense_TurretSelect2;
+    private readonly InputAction m_TowerDefense_TurretSelect3;
+    private readonly InputAction m_TowerDefense_Sell;
+    private readonly InputAction m_TowerDefense_BuyOrUpgrade;
+    private readonly InputAction m_TowerDefense_MousePosition;
+    private readonly InputAction m_TowerDefense_LMB;
+    private readonly InputAction m_TowerDefense_RMB;
+    public struct TowerDefenseActions
     {
         private @GameControlls m_Wrapper;
-        public GameActions(@GameControlls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Moving => m_Wrapper.m_Game_Moving;
-        public InputAction @Skill1 => m_Wrapper.m_Game_Skill1;
-        public InputAction @Skill2 => m_Wrapper.m_Game_Skill2;
-        public InputActionMap Get() { return m_Wrapper.m_Game; }
+        public TowerDefenseActions(@GameControlls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @TurretSelect => m_Wrapper.m_TowerDefense_TurretSelect;
+        public InputAction @TurretSelect1 => m_Wrapper.m_TowerDefense_TurretSelect1;
+        public InputAction @TurretSelect2 => m_Wrapper.m_TowerDefense_TurretSelect2;
+        public InputAction @TurretSelect3 => m_Wrapper.m_TowerDefense_TurretSelect3;
+        public InputAction @Sell => m_Wrapper.m_TowerDefense_Sell;
+        public InputAction @BuyOrUpgrade => m_Wrapper.m_TowerDefense_BuyOrUpgrade;
+        public InputAction @MousePosition => m_Wrapper.m_TowerDefense_MousePosition;
+        public InputAction @LMB => m_Wrapper.m_TowerDefense_LMB;
+        public InputAction @RMB => m_Wrapper.m_TowerDefense_RMB;
+        public InputActionMap Get() { return m_Wrapper.m_TowerDefense; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(GameActions set) { return set.Get(); }
-        public void AddCallbacks(IGameActions instance)
+        public static implicit operator InputActionMap(TowerDefenseActions set) { return set.Get(); }
+        public void AddCallbacks(ITowerDefenseActions instance)
         {
-            if (instance == null || m_Wrapper.m_GameActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_GameActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_TowerDefenseActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_TowerDefenseActionsCallbackInterfaces.Add(instance);
+            @TurretSelect.started += instance.OnTurretSelect;
+            @TurretSelect.performed += instance.OnTurretSelect;
+            @TurretSelect.canceled += instance.OnTurretSelect;
+            @TurretSelect1.started += instance.OnTurretSelect1;
+            @TurretSelect1.performed += instance.OnTurretSelect1;
+            @TurretSelect1.canceled += instance.OnTurretSelect1;
+            @TurretSelect2.started += instance.OnTurretSelect2;
+            @TurretSelect2.performed += instance.OnTurretSelect2;
+            @TurretSelect2.canceled += instance.OnTurretSelect2;
+            @TurretSelect3.started += instance.OnTurretSelect3;
+            @TurretSelect3.performed += instance.OnTurretSelect3;
+            @TurretSelect3.canceled += instance.OnTurretSelect3;
+            @Sell.started += instance.OnSell;
+            @Sell.performed += instance.OnSell;
+            @Sell.canceled += instance.OnSell;
+            @BuyOrUpgrade.started += instance.OnBuyOrUpgrade;
+            @BuyOrUpgrade.performed += instance.OnBuyOrUpgrade;
+            @BuyOrUpgrade.canceled += instance.OnBuyOrUpgrade;
+            @MousePosition.started += instance.OnMousePosition;
+            @MousePosition.performed += instance.OnMousePosition;
+            @MousePosition.canceled += instance.OnMousePosition;
+            @LMB.started += instance.OnLMB;
+            @LMB.performed += instance.OnLMB;
+            @LMB.canceled += instance.OnLMB;
+            @RMB.started += instance.OnRMB;
+            @RMB.performed += instance.OnRMB;
+            @RMB.canceled += instance.OnRMB;
+        }
+
+        private void UnregisterCallbacks(ITowerDefenseActions instance)
+        {
+            @TurretSelect.started -= instance.OnTurretSelect;
+            @TurretSelect.performed -= instance.OnTurretSelect;
+            @TurretSelect.canceled -= instance.OnTurretSelect;
+            @TurretSelect1.started -= instance.OnTurretSelect1;
+            @TurretSelect1.performed -= instance.OnTurretSelect1;
+            @TurretSelect1.canceled -= instance.OnTurretSelect1;
+            @TurretSelect2.started -= instance.OnTurretSelect2;
+            @TurretSelect2.performed -= instance.OnTurretSelect2;
+            @TurretSelect2.canceled -= instance.OnTurretSelect2;
+            @TurretSelect3.started -= instance.OnTurretSelect3;
+            @TurretSelect3.performed -= instance.OnTurretSelect3;
+            @TurretSelect3.canceled -= instance.OnTurretSelect3;
+            @Sell.started -= instance.OnSell;
+            @Sell.performed -= instance.OnSell;
+            @Sell.canceled -= instance.OnSell;
+            @BuyOrUpgrade.started -= instance.OnBuyOrUpgrade;
+            @BuyOrUpgrade.performed -= instance.OnBuyOrUpgrade;
+            @BuyOrUpgrade.canceled -= instance.OnBuyOrUpgrade;
+            @MousePosition.started -= instance.OnMousePosition;
+            @MousePosition.performed -= instance.OnMousePosition;
+            @MousePosition.canceled -= instance.OnMousePosition;
+            @LMB.started -= instance.OnLMB;
+            @LMB.performed -= instance.OnLMB;
+            @LMB.canceled -= instance.OnLMB;
+            @RMB.started -= instance.OnRMB;
+            @RMB.performed -= instance.OnRMB;
+            @RMB.canceled -= instance.OnRMB;
+        }
+
+        public void RemoveCallbacks(ITowerDefenseActions instance)
+        {
+            if (m_Wrapper.m_TowerDefenseActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ITowerDefenseActions instance)
+        {
+            foreach (var item in m_Wrapper.m_TowerDefenseActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_TowerDefenseActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public TowerDefenseActions @TowerDefense => new TowerDefenseActions(this);
+
+    // Roguelike
+    private readonly InputActionMap m_Roguelike;
+    private List<IRoguelikeActions> m_RoguelikeActionsCallbackInterfaces = new List<IRoguelikeActions>();
+    private readonly InputAction m_Roguelike_Moving;
+    private readonly InputAction m_Roguelike_Skill1;
+    private readonly InputAction m_Roguelike_Skill2;
+    private readonly InputAction m_Roguelike_Attack;
+    private readonly InputAction m_Roguelike_Attack2;
+    public struct RoguelikeActions
+    {
+        private @GameControlls m_Wrapper;
+        public RoguelikeActions(@GameControlls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Moving => m_Wrapper.m_Roguelike_Moving;
+        public InputAction @Skill1 => m_Wrapper.m_Roguelike_Skill1;
+        public InputAction @Skill2 => m_Wrapper.m_Roguelike_Skill2;
+        public InputAction @Attack => m_Wrapper.m_Roguelike_Attack;
+        public InputAction @Attack2 => m_Wrapper.m_Roguelike_Attack2;
+        public InputActionMap Get() { return m_Wrapper.m_Roguelike; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(RoguelikeActions set) { return set.Get(); }
+        public void AddCallbacks(IRoguelikeActions instance)
+        {
+            if (instance == null || m_Wrapper.m_RoguelikeActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_RoguelikeActionsCallbackInterfaces.Add(instance);
             @Moving.started += instance.OnMoving;
             @Moving.performed += instance.OnMoving;
             @Moving.canceled += instance.OnMoving;
@@ -312,9 +603,15 @@ public partial class @GameControlls: IInputActionCollection2, IDisposable
             @Skill2.started += instance.OnSkill2;
             @Skill2.performed += instance.OnSkill2;
             @Skill2.canceled += instance.OnSkill2;
+            @Attack.started += instance.OnAttack;
+            @Attack.performed += instance.OnAttack;
+            @Attack.canceled += instance.OnAttack;
+            @Attack2.started += instance.OnAttack2;
+            @Attack2.performed += instance.OnAttack2;
+            @Attack2.canceled += instance.OnAttack2;
         }
 
-        private void UnregisterCallbacks(IGameActions instance)
+        private void UnregisterCallbacks(IRoguelikeActions instance)
         {
             @Moving.started -= instance.OnMoving;
             @Moving.performed -= instance.OnMoving;
@@ -325,37 +622,37 @@ public partial class @GameControlls: IInputActionCollection2, IDisposable
             @Skill2.started -= instance.OnSkill2;
             @Skill2.performed -= instance.OnSkill2;
             @Skill2.canceled -= instance.OnSkill2;
+            @Attack.started -= instance.OnAttack;
+            @Attack.performed -= instance.OnAttack;
+            @Attack.canceled -= instance.OnAttack;
+            @Attack2.started -= instance.OnAttack2;
+            @Attack2.performed -= instance.OnAttack2;
+            @Attack2.canceled -= instance.OnAttack2;
         }
 
-        public void RemoveCallbacks(IGameActions instance)
+        public void RemoveCallbacks(IRoguelikeActions instance)
         {
-            if (m_Wrapper.m_GameActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_RoguelikeActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IGameActions instance)
+        public void SetCallbacks(IRoguelikeActions instance)
         {
-            foreach (var item in m_Wrapper.m_GameActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_RoguelikeActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_GameActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_RoguelikeActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public GameActions @Game => new GameActions(this);
+    public RoguelikeActions @Roguelike => new RoguelikeActions(this);
 
     // General
     private readonly InputActionMap m_General;
     private List<IGeneralActions> m_GeneralActionsCallbackInterfaces = new List<IGeneralActions>();
-    private readonly InputAction m_General_LMB;
-    private readonly InputAction m_General_RMB;
-    private readonly InputAction m_General_MousePosition;
     public struct GeneralActions
     {
         private @GameControlls m_Wrapper;
         public GeneralActions(@GameControlls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @LMB => m_Wrapper.m_General_LMB;
-        public InputAction @RMB => m_Wrapper.m_General_RMB;
-        public InputAction @MousePosition => m_Wrapper.m_General_MousePosition;
         public InputActionMap Get() { return m_Wrapper.m_General; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -365,28 +662,10 @@ public partial class @GameControlls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_GeneralActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_GeneralActionsCallbackInterfaces.Add(instance);
-            @LMB.started += instance.OnLMB;
-            @LMB.performed += instance.OnLMB;
-            @LMB.canceled += instance.OnLMB;
-            @RMB.started += instance.OnRMB;
-            @RMB.performed += instance.OnRMB;
-            @RMB.canceled += instance.OnRMB;
-            @MousePosition.started += instance.OnMousePosition;
-            @MousePosition.performed += instance.OnMousePosition;
-            @MousePosition.canceled += instance.OnMousePosition;
         }
 
         private void UnregisterCallbacks(IGeneralActions instance)
         {
-            @LMB.started -= instance.OnLMB;
-            @LMB.performed -= instance.OnLMB;
-            @LMB.canceled -= instance.OnLMB;
-            @RMB.started -= instance.OnRMB;
-            @RMB.performed -= instance.OnRMB;
-            @RMB.canceled -= instance.OnRMB;
-            @MousePosition.started -= instance.OnMousePosition;
-            @MousePosition.performed -= instance.OnMousePosition;
-            @MousePosition.canceled -= instance.OnMousePosition;
         }
 
         public void RemoveCallbacks(IGeneralActions instance)
@@ -404,16 +683,27 @@ public partial class @GameControlls: IInputActionCollection2, IDisposable
         }
     }
     public GeneralActions @General => new GeneralActions(this);
-    public interface IGameActions
+    public interface ITowerDefenseActions
+    {
+        void OnTurretSelect(InputAction.CallbackContext context);
+        void OnTurretSelect1(InputAction.CallbackContext context);
+        void OnTurretSelect2(InputAction.CallbackContext context);
+        void OnTurretSelect3(InputAction.CallbackContext context);
+        void OnSell(InputAction.CallbackContext context);
+        void OnBuyOrUpgrade(InputAction.CallbackContext context);
+        void OnMousePosition(InputAction.CallbackContext context);
+        void OnLMB(InputAction.CallbackContext context);
+        void OnRMB(InputAction.CallbackContext context);
+    }
+    public interface IRoguelikeActions
     {
         void OnMoving(InputAction.CallbackContext context);
         void OnSkill1(InputAction.CallbackContext context);
         void OnSkill2(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
+        void OnAttack2(InputAction.CallbackContext context);
     }
     public interface IGeneralActions
     {
-        void OnLMB(InputAction.CallbackContext context);
-        void OnRMB(InputAction.CallbackContext context);
-        void OnMousePosition(InputAction.CallbackContext context);
     }
 }
