@@ -1,6 +1,7 @@
 using Character.Controllers;
 using Panels;
 using Pool.Objects;
+using Pool.Spawners;
 using UnityEngine;
 using WRA.General.Patterns.Pool;
 using WRA.UI.PanelsSystem;
@@ -19,14 +20,13 @@ namespace Character.TrainSlots
         
         [Inject] private PoolBase<Turret> turretPool;
         [Inject] private PanelManager panelManager;
-        [Inject] private Train train;
         
         private TurretCharacter turretAttached;
         private bool isSelected;
         
         public void OnClick()
         {
-            train.SelectSlot(this);
+            TrainSpawner.Train.SelectSlot(this);
         }
 
         public void SelectSlot()
