@@ -9,11 +9,10 @@ namespace Player
     public class PlayerInputBind : MonoBehaviour
     {
         private GameControlls gameControlls;
-        private Train train;
 
         private void Start()
         {
-            train = TrainSpawner.Train;
+
             gameControlls = new GameControlls();
             gameControlls.TowerDefense.LMB.performed += ctx => OnLeftClick();
             gameControlls.TowerDefense.RMB.performed += ctx => OnRightClick();
@@ -49,12 +48,12 @@ namespace Player
         
         private void OnSelectTurret(int index)
         {
-            train.SelectSlot(index);
+            TrainSpawner.Train.SelectSlot(index);
         }
         
         private void BuyOrUpgrade()
         {
-            var selectedSlot = train.SelectedSlot;
+            var selectedSlot = TrainSpawner.Train.SelectedSlot;
             if(selectedSlot == null)
                 return;
             selectedSlot.BuildOrUpgradeTurret();
@@ -62,7 +61,7 @@ namespace Player
         
         private void Sell()
         {
-            var selectedSlot = train.SelectedSlot;
+            var selectedSlot = TrainSpawner.Train.SelectedSlot;
             if(selectedSlot == null)
                 return;
             selectedSlot.SellTurret();
