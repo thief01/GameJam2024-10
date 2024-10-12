@@ -1,4 +1,6 @@
+using System;
 using Pool.Objects;
+using Pool.Spawners;
 using UnityEngine;
 using Zenject;
 
@@ -6,12 +8,12 @@ namespace Player
 {
     public class PlayerInputBind : MonoBehaviour
     {
-        [Inject] private Train train;
-
         private GameControlls gameControlls;
-        
-        private void Awake()
+        private Train train;
+
+        private void Start()
         {
+            train = TrainSpawner.Train;
             gameControlls = new GameControlls();
             gameControlls.TowerDefense.LMB.performed += ctx => OnLeftClick();
             gameControlls.TowerDefense.RMB.performed += ctx => OnRightClick();
@@ -24,7 +26,7 @@ namespace Player
             
             gameControlls.Enable();
         }
-        
+
         private void OnLeftClick()
         {
             var mousePosition = Input.mousePosition;
