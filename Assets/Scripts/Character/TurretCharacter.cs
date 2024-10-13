@@ -1,9 +1,18 @@
+using System;
+using Character.Behaviours;
 using UnityEngine;
 
 namespace Character
 {
     public class TurretCharacter : CharacterBase
     {
+        public TurretBehaviour TurretBehaviour { get; private set; }
+
+        private void Awake()
+        {
+            TurretBehaviour = GetComponent<TurretBehaviour>();
+        }
+
         public override void Move(Vector2 direction)
         {
             throw new System.NotImplementedException();

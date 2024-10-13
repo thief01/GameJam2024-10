@@ -1,4 +1,5 @@
 using System;
+using Character.Bullet;
 using UnityEngine;
 using WRA.CharacterSystems;
 using WRA.CharacterSystems.StatisticsSystem.Controlers;
@@ -14,9 +15,7 @@ namespace Pool.Objects
         protected DynamicStatisticsController dynamicStatisticsController;
         protected DynamicStatisticValue speed;
         protected DynamicStatisticValue attackRange;
-        protected CharacterSystemBase owner;
-        protected LayerMask enemyLayer;
-        protected Collider2D target;
+        protected TargetInfo targetInfo;
         protected float damage;
         
         private void Awake()
@@ -55,13 +54,13 @@ namespace Pool.Objects
 
         public override void OnKill()
         {
-            var colliders = Physics2D.OverlapCircleAll(transform.position, attackRange.Value, enemyLayer);
+            var colliders = Physics2D.OverlapCircleAll(transform.position, attackRange.Value, targetInfo.EnemyLayer);
             foreach (var collider in colliders)
             {
                 var enemy = collider.GetComponent<IDamageable>();
                 if (enemy != null)
                 {
-                    enemy.DealDamage(new DamageInfo() { Owner = owner, CalculatedValueChanged = damage});
+                    enemy.DealDamage(new DamageInfo() { Owner = targetInfo.Owner, CalculatedValueChanged = damage});
                 }
             }
         }
@@ -112,12 +111,10 @@ namespace Pool.Objects
         }
 
 
-        public virtual void SetTarget(Collider2D target, float damage, LayerMask layerMask, CharacterSystemBase owner)
+        public virtual void SetTarget(float damage, TargetInfo targetInfo)
         {
-            this.target = target;
+            this.targetInfo = targetInfo;
             this.damage = damage;
-            enemyLayer = layerMask;
-            this.owner = owner;
         }
         protected abstract Vector3 GetTargetPosition();
     }

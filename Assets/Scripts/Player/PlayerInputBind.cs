@@ -28,6 +28,7 @@ namespace Player
 
         private void OnLeftClick()
         {
+            TrainSpawner.Train.ReleaseControl();
             TrainSpawner.Train.DeselectAllSlots();
             var mousePosition = Input.mousePosition;
             var colliders = Physics2D.OverlapPointAll(Camera.main.ScreenToWorldPoint(mousePosition));
@@ -48,7 +49,7 @@ namespace Player
         
         private void OnSelectTurret(int index)
         {
-            TrainSpawner.Train.SelectSlot(index);
+            TrainSpawner.Train.TakeControl(gameControlls, index);
         }
         
         private void BuyOrUpgrade()

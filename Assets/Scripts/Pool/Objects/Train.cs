@@ -37,6 +37,21 @@ namespace Pool.Objects
         {
             SelectSlot(trainSlots[id]);
         }
+
+        public void TakeControl(GameControlls gameControlls, int id)
+        {
+            ReleaseControl();
+            SelectSlot(id);
+            selectedSlot?.TurretAttached?.TurretBehaviour.TakeControl(gameControlls);
+        }
+        
+        public void ReleaseControl()
+        {
+            foreach (var trainSlot in trainSlots)
+            {
+                trainSlot?.TurretAttached?.TurretBehaviour.ReleaseControl();
+            }
+        }
         
         public void SelectSlot(TrainSlot selectedSlot)
         {

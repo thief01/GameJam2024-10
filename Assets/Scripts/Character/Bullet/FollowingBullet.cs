@@ -10,17 +10,22 @@ namespace Character.Bullet
     {
         private Vector3 lastTargetPosition;
         
-        public override void SetTarget(Collider2D target, float damage, LayerMask enemyLayer, CharacterSystemBase owner)
+        public override void SetTarget(float damage, TargetInfo targetInfo)
         {
-            base.SetTarget(target, damage, base.enemyLayer, owner);
-            lastTargetPosition = target.ClosestPoint(transform.position);
+            if (targetInfo.IsTargetNull())
+            {
+                Kill();
+                return;
+            }
+            base.SetTarget(damage, targetInfo);
+            lastTargetPosition = targetInfo.GetTargetPosition(transform.position);
         }
 
         protected override Vector3 GetTargetPosition()
         {
-            if (target != null)
+            if (!targetInfo.IsTargetNull())
             {
-                lastTargetPosition = target.ClosestPoint(transform.position);
+                lastTargetPosition = targetInfo.GetTargetPosition(transform.position);
                 return lastTargetPosition;
             }
 
