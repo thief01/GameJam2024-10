@@ -9,7 +9,7 @@ using Zenject;
 
 namespace Pool.Spawners
 {
-    public class EnemySpawner : MonoBehaviour
+    public class TDEnemySpawner : MonoBehaviour
     {
         [SerializeField] private float spawnDelay = 1;
         [SerializeField] private List<int> spawnEnemies;

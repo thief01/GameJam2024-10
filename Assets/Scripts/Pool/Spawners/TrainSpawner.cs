@@ -11,12 +11,7 @@ namespace Pool.Spawners
         
         [Inject] private PoolBase<Train> trainPool;
         
-        private void Start()
-        {
-            SpawnTrain();
-        }
-        
-        private void SpawnTrain()
+        public void SpawnTrain()
         {
             var spawnedTrain = trainPool.SpawnObject();
             spawnedTrain.transform.position = Vector3.zero;
