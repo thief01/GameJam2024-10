@@ -276,6 +276,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5668027156207216349, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7886259707123897293}
+    - targetCorrespondingSourceObject: {fileID: 5668027156207216349, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6408766119895418561}
   m_SourcePrefab: {fileID: 100100000, guid: aeeff1c6dcd01174f9c8e35b62cd9dd3, type: 3}
 --- !u!212 &6172752147065801280 stripped
 SpriteRenderer:
@@ -449,6 +452,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _variantId: 0
+  OnSystemsRegistered:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &684068243710307042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,6 +480,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyAmount: 10
+--- !u!114 &-6408766119895418561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627829766209904171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4827779dfbcef69469f0c55a2c3509e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStatistics:
+  - StatisticName: MaxHealth
+    Value: 100
+  - StatisticName: AttackSpeed
+    Value: 1
+  - StatisticName: DamageArea
+    Value: 1
+  - StatisticName: Damage
+    Value: 2
+  - StatisticName: DamageMultiplier
+    Value: 0
+  - StatisticName: CritMultiplier
+    Value: 0
+  - StatisticName: CritChance
+    Value: 0
+  - StatisticName: AttackRange
+    Value: 5
+  - StatisticName: DamageReduction
+    Value: 0
+  - StatisticName: Shield
+    Value: 0
+  - StatisticName: MovementSpeed
+    Value: 1
 --- !u!1001 &6404759444630979913
 PrefabInstance:
   m_ObjectHideFlags: 0

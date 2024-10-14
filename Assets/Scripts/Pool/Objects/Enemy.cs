@@ -1,18 +1,22 @@
 ﻿using System;
 using Character.Behaviours;
+using UnityEngine;
+using WRA.CharacterSystems;
 using WRA.CharacterSystems.StatisticsSystem.Controllers;
 using WRA.CharacterSystems.StatisticsSystem.ResourcesInfos;
 using WRA.General.Patterns.Pool;
+using Zenject;
 
 namespace Pool.Objects
 {
-    public class Enemy : PoolObjectBase
+    public class Enemy : CharacterObject
     {
         private HealthSystemBaseController healthSystemBaseController;
         private EnemyBehaviour enemyBehaviour;
-
+        
         private void Awake()
         {
+            
             healthSystemBaseController = GetComponent<HealthSystemBaseController>();
             enemyBehaviour = GetComponent<EnemyBehaviour>();
             healthSystemBaseController.OnKilled.AddListener(ctg => Kill());
@@ -26,7 +30,6 @@ namespace Pool.Objects
         public override void OnSpawn()
         {
             gameObject.SetActive(true);
-            enemyBehaviour.OnSpawn();
             healthSystemBaseController.Heal(new HealInfo() {CalculatedValueChanged = healthSystemBaseController.MaxValueStatistic.Value});
         }
 

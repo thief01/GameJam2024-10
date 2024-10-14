@@ -9,15 +9,15 @@ namespace Character.Bullet
     {
         private Vector3 target;
 
-        public override void SetTarget(Collider2D target, float damage, LayerMask enemyLayer, CharacterSystemBase owner)
+        public override void SetTarget(float damage, TargetInfo targetInfo)
         {
-            if (target == null)
+            if (targetInfo.IsTargetNull())
             {
                 Kill();
                 return;
             }
-            base.SetTarget(target, damage, enemyLayer, owner);
-            this.target = target.ClosestPoint(transform.position);
+            base.SetTarget(damage, targetInfo);
+            target = targetInfo.GetTargetPosition(transform.position);
         }
 
         protected override Vector3 GetTargetPosition()

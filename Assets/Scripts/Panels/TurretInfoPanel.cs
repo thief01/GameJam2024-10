@@ -10,7 +10,7 @@ namespace Panels
 
         public void Sell()
         {
-            trainSlot.RemoveTurret();
+            trainSlot.SellTurret();
         }
 
         public void Upgrade()

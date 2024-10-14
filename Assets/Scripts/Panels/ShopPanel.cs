@@ -13,7 +13,7 @@ namespace Panels
         
         public void OnBuyClick()
         {
-            trainSlot.AddTurret();
+            trainSlot.BuildOrUpgradeTurret();
         }
         
         protected override void UpdatePanelData()

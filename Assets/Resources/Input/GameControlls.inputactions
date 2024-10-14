@@ -2,134 +2,58 @@
     "name": "GameControlls",
     "maps": [
         {
-            "name": "Game",
+            "name": "TowerDefense",
             "id": "3a6413bb-fce7-4434-a1b0-9694173f0e38",
             "actions": [
                 {
-                    "name": "Moving",
-                    "type": "PassThrough",
-                    "id": "d0e26967-cb9a-4042-adc7-d87fba405219",
-                    "expectedControlType": "Vector2",
+                    "name": "TurretSelect",
+                    "type": "Button",
+                    "id": "6ff58909-9266-4534-81ca-2d0a91937576",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
-                    "name": "Skill1",
+                    "name": "TurretSelect1",
                     "type": "Button",
-                    "id": "0ab9a7c0-523a-44c9-a810-20c1c5d4f3e5",
+                    "id": "016c6444-3b15-4e8e-8baa-ead21be68560",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Skill2",
+                    "name": "TurretSelect2",
                     "type": "Button",
-                    "id": "d641a959-cf37-4962-b420-ca9ab76b083b",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "2D Vector",
-                    "id": "1922c3c5-4653-49bd-bfc6-160e229b6f3b",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Moving",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "c074f52d-b337-4745-be85-1e8325a8909a",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Moving",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "1f8260c7-e9a4-42a0-b830-98ee20a08e0a",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Moving",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "73880a50-2d59-4eac-ad46-380077e70306",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Moving",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "4c2d5013-f963-4640-bbd2-2e0c707691fd",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Moving",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "2adec97c-9152-434e-a919-e143ca4408ed",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Skill1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ac22206f-6471-4440-a441-85c035e60f8c",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Skill2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "General",
-            "id": "92b64463-4de3-4a8e-babe-be4389f1c76f",
-            "actions": [
-                {
-                    "name": "LMB",
-                    "type": "Button",
-                    "id": "df3a1625-fd9f-4d8a-81f0-d20879a48d99",
+                    "id": "ed2ef37f-d1c7-4e02-ae23-3a1e4ddae3f7",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "RMB",
+                    "name": "TurretSelect3",
                     "type": "Button",
-                    "id": "ffb86c1b-c0e0-4ca9-b860-ad4663b297f8",
+                    "id": "0a8610f6-ee6e-40b7-b031-63b32fed3a43",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Sell",
+                    "type": "Button",
+                    "id": "58ed07c1-76cc-41ab-9bd9-9f2d27b90079",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BuyOrUpgrade",
+                    "type": "Button",
+                    "id": "8d651f76-83c6-4f31-8d0d-1e089e2e0c3c",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -138,8 +62,26 @@
                 {
                     "name": "MousePosition",
                     "type": "PassThrough",
-                    "id": "1ff32033-61ce-4283-afd7-4b44acad61b5",
+                    "id": "d0f1a273-685f-4de5-b488-bc8ef43c96f9",
                     "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LMB",
+                    "type": "Button",
+                    "id": "76d32292-5623-4de3-b68b-98cf18f3ce23",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RMB",
+                    "type": "Button",
+                    "id": "95f31a7e-3ac5-456f-ab04-5096c9ee69ab",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -148,7 +90,73 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "a47aed06-0519-4b13-886a-26c7bc1e302e",
+                    "id": "6dbfd046-d169-42ec-bdfd-200ee23dfe79",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TurretSelect1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "40db1bd3-d1af-4744-880a-b836f296d363",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TurretSelect2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5a89568e-b192-45f3-88e2-03156e156c29",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TurretSelect3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "804acd42-eb49-46d7-89bb-536e7ccc0020",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sell",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c3ae0b91-f409-4b69-84d1-07b8b3fb8ac1",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BuyOrUpgrade",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7f2f14b8-15fb-4e62-a169-901728c2224d",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MousePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7cd6acaa-2300-4760-b0e5-9fca03e90ecb",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
@@ -159,7 +167,7 @@
                 },
                 {
                     "name": "",
-                    "id": "ea7f3633-7bbf-45b7-a443-5bc98abac32c",
+                    "id": "29ec2e5d-223b-4bf1-875a-8ecc584f0be6",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
@@ -170,16 +178,174 @@
                 },
                 {
                     "name": "",
-                    "id": "bb5d773f-4fa5-4e31-b5a2-4882fcfd9809",
-                    "path": "<Mouse>/delta",
+                    "id": "33711d6c-68c0-4d60-901c-960b6f5ffe7e",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MousePosition",
+                    "action": "TurretSelect",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Roguelike",
+            "id": "512bcf99-676e-4277-b141-76d27419a414",
+            "actions": [
+                {
+                    "name": "Moving",
+                    "type": "PassThrough",
+                    "id": "1449973a-b0d6-40d2-bb0d-88b9cd623e9d",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Skill1",
+                    "type": "Button",
+                    "id": "990323a3-8ff4-4f8d-aa73-65821616686d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Skill2",
+                    "type": "Button",
+                    "id": "a5737ada-e89c-4168-944e-3cc29099a564",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "8a702e7f-6138-48c3-8166-9972457a4775",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack2",
+                    "type": "Button",
+                    "id": "7dadd29a-b9a6-47fb-a024-f802da69e4a5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "00113507-be41-4271-9d03-47af2a369ec0",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moving",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "22f02e14-4795-4a9c-b6d9-27eb584730c0",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moving",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "f667abf9-4f81-4215-b83b-ba38bd59bbf5",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moving",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "148d53ac-141a-412d-a47c-9a142e072631",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moving",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "5562dca3-b097-4441-88b8-2d3123580dd2",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moving",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "d17bdf39-405c-4a13-b5d6-775294f7179e",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skill1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "898d8248-9364-4daf-986f-a336ff07484d",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skill2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0cdc5c9-69f3-4244-811d-9aab4559abfd",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "702835f2-bb2f-4bd6-8bfc-a8d5f3e79b3b",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "General",
+            "id": "92b64463-4de3-4a8e-babe-be4389f1c76f",
+            "actions": [],
+            "bindings": []
         }
     ],
     "controlSchemes": []

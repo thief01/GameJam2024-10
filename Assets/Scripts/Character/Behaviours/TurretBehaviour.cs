@@ -2,6 +2,7 @@ using System;
 using Character.Bullet;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using WRA.CharacterSystems;
 using WRA.CharacterSystems.StatisticsSystem.Controlers;
 using WRA.CharacterSystems.StatisticsSystem.Controllers;
@@ -31,6 +32,11 @@ namespace Character.Behaviours
         
         private bool rotatedTowardsEnemy;
         private Collider2D target;
+        private Vector3 targetPosition;
+
+        private GameControlls gameControlls;
+        private bool isControlled;
+        private bool isAttacking;
 
 
         private void Awake()
@@ -40,8 +46,10 @@ namespace Character.Behaviours
 
         private void Update()
         {
-            FindEnemies();
-            RotateTowardsEnemy();
+            if(!isControlled)
+                FindEnemies();
+            RotateTowardsTarget();
+            
             if (attackCooldown <= 0)
             {
                 Attack();
@@ -70,25 +78,34 @@ namespace Character.Behaviours
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, attackRange.Value);
         }
+        
+        public void TakeControl(GameControlls controlls)
+        {
+            isControlled = true;
+            gameControlls = controlls;
+        }
+        
+        public void ReleaseControl()
+        {
+            isControlled = false;
+            if(gameControlls == null)
+                return;
+            gameControlls = null;
+        }
 
         private void FindEnemies()
         {
             enemiesInRange = Physics2D.OverlapCircleAll(transform.position, attackRange.Value, enemyLayer);
         }
         
-        private void RotateTowardsEnemy()
+        private void RotateTowardsTarget()
         {
-            var closestEnemy = GetClosestEnemy();
-            if (closestEnemy == null)
-            {
-                target = null;
+            targetPosition = GetClosestTarget();
+
+            if (!isControlled && target == null)
                 return;
-            }
-            target = closestEnemy;
-            
-            
-            var position2D = new Vector2(transform.position.x, transform.position.y);
-            var direction = (closestEnemy.ClosestPoint(transform.position) - position2D).normalized;
+
+            var direction = (targetPosition - transform.position).normalized;
             var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             var rotation = Quaternion.Euler(new Vector3(0, 0, angle));
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotationSpeed.Value * Time.deltaTime);
@@ -100,20 +117,30 @@ namespace Character.Behaviours
         {
             if (!rotatedTowardsEnemy)
                 return;
-            if (target == null)
+            if(!isControlled && target == null)
                 return;
+            
             var bullet = bulletPool.SpawnObject(bulletId) as Pool.Objects.Bullet;
             bullet.transform.position = muzzle.position;
             bullet.transform.rotation = transform.rotation;
             bullet.gameObject.SetActive(true);
             attackCooldown = 1 / attackSpeed.Value;
+            
+            var targetInfo = new TargetInfo(isControlled) {Owner = this, Target = target, EnemyLayer = enemyLayer};
+            targetInfo.SetDummyTarget(targetPosition);
 
-            bullet.SetTarget(target, dynamicStatisticsController.GetStatistic("Damage").Value, enemyLayer, this);
+            bullet.SetTarget( dynamicStatisticsController.GetStatistic("Damage").Value, targetInfo);
             OnShoot.Invoke();
         }
         
-        private Collider2D GetClosestEnemy()
+        private Vector3 GetClosestTarget()
         {
+            target = null;
+            if (isControlled)
+            {
+                return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            }
+            
             Collider2D closestEnemy = null;
             float closestDistance = Mathf.Infinity;
             foreach (var enemy in enemiesInRange)
@@ -127,7 +154,13 @@ namespace Character.Behaviours
                 }
             }
 
-            return closestEnemy;
+            if (closestEnemy == null)
+            {
+                return Vector3.zero;
+            }
+
+            target = closestEnemy;
+            return closestEnemy.ClosestPoint(transform.position);
         }
     }
 }
