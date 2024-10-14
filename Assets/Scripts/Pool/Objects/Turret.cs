@@ -1,8 +1,9 @@
+using WRA.CharacterSystems;
 using WRA.General.Patterns.Pool;
 
 namespace Pool.Objects
 {
-    public class Turret : PoolObjectBase
+    public class Turret : CharacterObject
     {
 
         public override void OnInit()

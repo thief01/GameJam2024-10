@@ -12,6 +12,7 @@ namespace Pool
         private PoolBase<Bullet> bulletPool;
         private PoolBase<Turret> turretPool;
         private PoolBase<Enemy> enemyPool;
+        private PoolBase<Train> trainPool;
         
         private List<IPool> pools = new List<IPool>();
         
@@ -23,6 +24,7 @@ namespace Pool
             bulletPool.poolObjectFactory = Container.Resolve<PoolObjectFactory>();
             turretPool.poolObjectFactory = Container.Resolve<PoolObjectFactory>();
             enemyPool.poolObjectFactory = Container.Resolve<PoolObjectFactory>();
+            trainPool.poolObjectFactory = Container.Resolve<PoolObjectFactory>();
 
             for (int i = 0; i < myScriptableObjects.Length; i++)
             {
@@ -35,15 +37,18 @@ namespace Pool
             bulletPool = new PoolBase<Bullet>();
             turretPool = new PoolBase<Turret>();
             enemyPool = new PoolBase<Enemy>();
+            trainPool = new PoolBase<Train>();
 
             pools.Add(bulletPool);
             pools.Add(turretPool);
             pools.Add(enemyPool);
+            pools.Add(trainPool);
 
         
             Container.Bind<PoolBase<Bullet>>().FromInstance(bulletPool);
             Container.Bind<PoolBase<Turret>>().FromInstance(turretPool);
             Container.Bind<PoolBase<Enemy>>().FromInstance(enemyPool);
+            Container.Bind<PoolBase<Train>>().FromInstance(trainPool);
 
             Container.Bind<List<IPool>>().FromInstance(pools);
         }
