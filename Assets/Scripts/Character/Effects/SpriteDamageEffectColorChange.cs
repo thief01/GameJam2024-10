@@ -8,7 +8,7 @@ namespace Character.Effects
 {
     public class SpriteDamageEffectColorChange : DamageEffectBase
     {
-        [SerializeField] private Tilemap spriteRenderer;
+        [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private Color damageColor;
         
         protected override void OnDamage(DamageInfo damageInfo)

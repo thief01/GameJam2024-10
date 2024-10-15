@@ -156,7 +156,7 @@ MonoBehaviour:
   - StatisticName: CritChance
     Value: 0
   - StatisticName: AttackRange
-    Value: 0
+    Value: 5
   - StatisticName: MovementSpeed
     Value: 1
   - StatisticName: MaxHealth
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 047daf6573f87034ab04564d806cc316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSystemBaseController: {fileID: 0}
+  healthSystemBaseController: {fileID: 8247430324679715160}
   spriteRenderer: {fileID: 6881207314671479143}
   damageColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &5845693683429680270
@@ -548,6 +548,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7220559653231848925, guid: 3680eb03d35ea2841b1c3d90ce4d8a88, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475221896056955199, guid: 3680eb03d35ea2841b1c3d90ce4d8a88, type: 3}
       propertyPath: enemyLayer.m_Bits
       value: 128
       objectReference: {fileID: 0}
