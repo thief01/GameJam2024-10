@@ -6,10 +6,10 @@ namespace Character.Effects
 {
     public abstract class DamageEffectBase : MonoBehaviour
     {
-        private HealthSystemBaseController healthSystemBaseController;
+        [SerializeField] private HealthSystemBaseController healthSystemBaseController;
+        
         private void Awake()
         {
-            healthSystemBaseController = GetComponent<HealthSystemBaseController>();
             healthSystemBaseController.OnDamaged.AddListener(OnDamage);
         }
 
