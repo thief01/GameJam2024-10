@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -10,9 +11,15 @@ namespace Character.Effects
     {
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private Color damageColor;
-        
+
+        private void OnEnable()
+        {
+            spriteRenderer.color = Color.white;
+        }
+
         protected override void OnDamage(DamageInfo damageInfo)
         {
+            StopAllCoroutines();
             spriteRenderer.color = damageColor;
             StartCoroutine(ResetColor());
         }

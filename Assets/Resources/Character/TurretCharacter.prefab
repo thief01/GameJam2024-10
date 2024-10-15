@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStatistics:
   - StatisticName: AttackSpeed
-    Value: 1
+    Value: 2
   - StatisticName: DamageArea
     Value: 0
   - StatisticName: Damage
@@ -64,7 +64,7 @@ MonoBehaviour:
   - StatisticName: AttackRange
     Value: 7.5
   - StatisticName: RotationSpeed
-    Value: 90
+    Value: 180
 --- !u!114 &6983152269334075107
 MonoBehaviour:
   m_ObjectHideFlags: 0

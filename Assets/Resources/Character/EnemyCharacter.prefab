@@ -160,7 +160,7 @@ MonoBehaviour:
   - StatisticName: MovementSpeed
     Value: 1
   - StatisticName: MaxHealth
-    Value: 25
+    Value: 3
   - StatisticName: Armor
     Value: 0
   - StatisticName: MaxShield
