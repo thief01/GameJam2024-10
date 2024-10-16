@@ -13,8 +13,11 @@ namespace Pool.Spawners
     {
         [SerializeField] private float spawnDelay = 1;
         [SerializeField] private List<int> spawnEnemies;
+        [SerializeField] private int spawnCount = 1;
         
         [Inject] private PoolBase<Enemy> enemyPool;
+        
+        private int currentSpawnCount = 0;
         
         private void Update()
         {
@@ -23,12 +26,15 @@ namespace Pool.Spawners
             {
                 spawnDelay = 1;
                 SpawnUnit(spawnEnemies[UnityEngine.Random.Range(0, spawnEnemies.Count)]);
-                
             }
         }
         
         private void SpawnUnit(int id)
         {
+            if (spawnCount != 0 && currentSpawnCount >= spawnCount)
+            {
+                return;
+            }
             var spawnedEnemy = enemyPool.SpawnObject(id);
             spawnedEnemy.transform.position = transform.position;
             // var enemyBehaviour = spawnedEnemy.GetComponent<EnemyBehaviour>();
