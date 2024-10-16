@@ -78,7 +78,7 @@ namespace Character.TrainSlots
                 return;
             if(removeMoney)
                 MoneyController.Instance.RemoveMoney(buyPrice);
-            var turret = turretPool.SpawnObject();
+            var turret = turretPool.SpawnObject(id);
             turret.transform.SetParent(transform);
             turret.transform.position = transform.position;
             turretAttached = turret.GetComponent<TurretCharacter>();

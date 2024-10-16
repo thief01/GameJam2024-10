@@ -873,7 +873,7 @@ MonoBehaviour:
   sellPrice: 50
   buyPrice: 100
   upgradePrice: 50
-  startTurrret: 1
+  startTurrret: 9
 --- !u!1 &6159636138072960014
 GameObject:
   m_ObjectHideFlags: 0
