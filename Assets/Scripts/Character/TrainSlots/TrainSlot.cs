@@ -30,7 +30,7 @@ namespace Character.TrainSlots
         {
             if (startTurrret != -1)
             {
-                BuildTurret(startTurrret);
+                BuildTurret(startTurrret, false);
             }
         }
 

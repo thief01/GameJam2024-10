@@ -31,7 +31,7 @@ namespace Character.General
         {
             trainSpawner.SpawnTrain();
             fadeManager = panelManager.OpenPanel("FadeManager") as FadeManager;
-            fadeManager.FadeIn();
+            fadeManager.SetFadeAlpha(1);
             StartLevel(LevelType.towerDefence);
         }
 
@@ -55,6 +55,7 @@ namespace Character.General
         {
             yield return new WaitForSeconds(1);
             fadeManager.FadeOut();
+            yield return new WaitForSeconds(5);
             spawners.ForEach(ctg => ctg.StartSpawning());
             mapScrolling.StopScrolling();
         }
