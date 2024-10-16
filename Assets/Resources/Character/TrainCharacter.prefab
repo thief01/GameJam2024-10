@@ -498,6 +498,7 @@ MonoBehaviour:
   sellPrice: 50
   buyPrice: 100
   upgradePrice: 50
+  startTurrret: -1
 --- !u!1 &5668027156207216349
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,6 +873,7 @@ MonoBehaviour:
   sellPrice: 50
   buyPrice: 100
   upgradePrice: 50
+  startTurrret: 1
 --- !u!1 &6159636138072960014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2541,6 +2543,7 @@ MonoBehaviour:
   sellPrice: 50
   buyPrice: 100
   upgradePrice: 50
+  startTurrret: -1
 --- !u!1 &7437033577269377528
 GameObject:
   m_ObjectHideFlags: 0
@@ -4736,3 +4739,4 @@ MonoBehaviour:
   sellPrice: 50
   buyPrice: 100
   upgradePrice: 50
+  startTurrret: -1

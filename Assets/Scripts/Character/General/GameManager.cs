@@ -1,16 +1,62 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using General;
 using Pool.Spawners;
 using UnityEngine;
 using WRA_SDK.WRA.General;
+using WRA.UI.PanelsSystem;
+using WRA.UI.PanelsSystem.FadeSystem;
+using Zenject;
 
 namespace Character.General
 {
     public class GameManager : GameManagerBase
     {
         [SerializeField] private TrainSpawner trainSpawner;
+
+        [Inject] private PanelManager panelManager;
         
+        private List<TDEnemySpawner> spawners = new List<TDEnemySpawner>();
+        private FadeManager fadeManager;
+        private MapScrolling mapScrolling;
+
+        private void Awake()
+        {
+            mapScrolling = FindAnyObjectByType<MapScrolling>();
+        }
+
+
         private void Start()
         {
             trainSpawner.SpawnTrain();
+            fadeManager = panelManager.OpenPanel("FadeManager") as FadeManager;
+            fadeManager.FadeIn();
+            StartLevel(LevelType.towerDefence);
+        }
+
+
+        public void StartLevel(LevelType levelType)
+        {
+            fadeManager.FadeIn(OnEndFadeIn);
+        }
+        
+        public void AddSpawner(TDEnemySpawner spawner)
+        {
+            spawners.Add(spawner);
+        }
+
+        private void OnEndFadeIn()
+        {
+            StartCoroutine(DelayFadeOut());
+        }
+        
+        private IEnumerator DelayFadeOut()
+        {
+            yield return new WaitForSeconds(1);
+            fadeManager.FadeOut();
+            spawners.ForEach(ctg => ctg.StartSpawning());
+            mapScrolling.StopScrolling();
         }
     }
 }

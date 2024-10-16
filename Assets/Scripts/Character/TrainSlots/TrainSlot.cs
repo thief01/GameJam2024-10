@@ -1,3 +1,4 @@
+using System;
 using Character.Controllers;
 using Panels;
 using Pool.Objects;
@@ -17,13 +18,22 @@ namespace Character.TrainSlots
         [SerializeField] private int sellPrice = 50;
         [SerializeField] private int buyPrice = 100;
         [SerializeField] private int upgradePrice = 50;
+        [SerializeField] private int startTurrret = -1;
         
         [Inject] private PoolBase<Turret> turretPool;
         [Inject] private PanelManager panelManager;
         
         private TurretCharacter turretAttached;
         private bool isSelected;
-        
+
+        private void Start()
+        {
+            if (startTurrret != -1)
+            {
+                BuildTurret(startTurrret);
+            }
+        }
+
         public void OnClick()
         {
             TrainSpawner.Train.SelectSlot(this);
@@ -62,11 +72,12 @@ namespace Character.TrainSlots
             UpgradeTurret();
         }
         
-        private void BuildTurret()
+        private void BuildTurret(int id = 0, bool removeMoney = true)
         {
             if(buyPrice > MoneyController.Instance.Money)
                 return;
-            MoneyController.Instance.RemoveMoney(buyPrice);
+            if(removeMoney)
+                MoneyController.Instance.RemoveMoney(buyPrice);
             var turret = turretPool.SpawnObject();
             turret.transform.SetParent(transform);
             turret.transform.position = transform.position;
