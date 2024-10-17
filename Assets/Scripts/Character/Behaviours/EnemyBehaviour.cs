@@ -33,7 +33,8 @@ namespace Character.Behaviours
         
         private void Move()
         {
-            var point = TrainSpawner.Train.transform.position;
+            var collider = TrainSpawner.Train.GetComponent<Collider2D>();
+            var point = collider.ClosestPoint(transform.position);
             if(Vector3.Distance(point, transform.position) > attackRange.Value - 0.5f)
             {
                 transform.position = Vector3.MoveTowards(transform.position, point, speed.Value*Time.deltaTime);
