@@ -27,23 +27,30 @@ namespace Character.Controllers
         
         void Awake()
         {
-            healthSystemBaseController = GetComponent<HealthSystemBaseController>();
-            healthSystemBaseController.OnKilled.AddListener(GiveExp);
+            if (!isPlayer)
+            {
+                healthSystemBaseController = GetComponent<HealthSystemBaseController>();
+                healthSystemBaseController.OnKilled.AddListener(GiveExp);
+            }
         }
 
         private void GiveExp(KillInfo arg0)
         {
-            
+            var expController = arg0.Owner.GetComponent<ExpController>();
+            expController?.AddExp(expAfterDead);
         }
 
         private void AddExp(int exp)
         {
             currentExp += exp;
+            if (LEVELS.Count <= curretnLevel)
+                return;
+            
             if (currentExp >= LEVELS[curretnLevel])
             {
                 curretnLevel++;
                 currentExp = 0;
-                panelManager.OpenPanel("LevelUpPanel", new PanelDataBase() {Data = this});
+                panelManager.OpenPanel("LevelUpPanelTurret", new PanelDataBase() {Data = this});
             }
         }
     }

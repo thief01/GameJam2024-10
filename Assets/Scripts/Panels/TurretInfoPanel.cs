@@ -6,6 +6,7 @@ namespace Panels
 {
     public class TurretInfoPanel : InfoPanelBase
     {
+        
         private TrainSlot trainSlot;
 
         public void Sell()

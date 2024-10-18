@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6983152269334075107}
   - component: {fileID: 8475221896056955199}
   - component: {fileID: 164761181474270735}
+  - component: {fileID: -4450219192868178996}
   m_Layer: 0
   m_Name: TurretBase
   m_TagString: Untagged
@@ -119,6 +120,20 @@ MonoBehaviour:
   OnSystemsRegistered:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-4450219192868178996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772752236072470621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44029ac5c274df1449777e8ea38493b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expAfterDead: 10
+  isPlayer: 1
 --- !u!1 &2752064661482888953
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,9 @@ namespace Character.Behaviours
 {
     public class TurretBehaviour : CharacterSystemBase
     {
+        public const float DAMAGE_UPGRADE = 1.5f;
+        public const float ATTACK_SPEED_UPGRADE = 1.5f;
+        
         public UnityEvent OnShoot;
         public float AttackCooldownPercentage => attackCooldown / (1 / attackSpeed.Value);
         [SerializeField] private LayerMask enemyLayer;
@@ -91,6 +94,16 @@ namespace Character.Behaviours
             if(gameControlls == null)
                 return;
             gameControlls = null;
+        }
+        
+        public void UpgradeDamage()
+        {
+            dynamicStatisticsController.GetStatistic("Damage").Value *= DAMAGE_UPGRADE;
+        }
+        
+        public void UpgradeAttackSpeed()
+        {
+            dynamicStatisticsController.GetStatistic("AttackSpeed").Value *= ATTACK_SPEED_UPGRADE;
         }
 
         private void FindEnemies()
