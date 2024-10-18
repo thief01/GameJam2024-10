@@ -151,7 +151,10 @@ namespace Character.Behaviours
             target = null;
             if (isControlled)
             {
-                return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                var direction = worldPoint - transform.position;
+                var normalizedDirection = direction.normalized;
+                return normalizedDirection * attackRange.Value;
             }
             
             Collider2D closestEnemy = null;
