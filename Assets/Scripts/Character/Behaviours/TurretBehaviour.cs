@@ -153,9 +153,6 @@ namespace Character.Behaviours
             {
                 var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 var direction = (worldPoint - transform.position).normalized;
-                var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                
-                
                 return transform.position + direction * attackRange.Value;
             }
             
