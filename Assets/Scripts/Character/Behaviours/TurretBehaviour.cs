@@ -152,9 +152,11 @@ namespace Character.Behaviours
             if (isControlled)
             {
                 var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                var direction = worldPoint - transform.position;
-                var normalizedDirection = direction.normalized;
-                return normalizedDirection * attackRange.Value;
+                var direction = (worldPoint - transform.position).normalized;
+                var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                
+                
+                return transform.position + direction * attackRange.Value;
             }
             
             Collider2D closestEnemy = null;
