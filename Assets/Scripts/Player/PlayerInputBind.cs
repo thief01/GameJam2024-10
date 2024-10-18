@@ -1,4 +1,5 @@
 using System;
+using Character.General;
 using Pool.Objects;
 using Pool.Spawners;
 using UnityEngine;
@@ -8,6 +9,8 @@ namespace Player
 {
     public class PlayerInputBind : MonoBehaviour
     {
+        [Inject] private GameManager gameManager;
+        
         private GameControlls gameControlls;
 
         private void Start()

@@ -13,6 +13,7 @@ namespace Character.General
 {
     public class GameManager : GameManagerBase
     {
+        public SceneType SceneType { get; private set; }
         [SerializeField] private TrainSpawner trainSpawner;
 
         [Inject] private PanelManager panelManager;
@@ -40,6 +41,7 @@ namespace Character.General
                     StartLevel(LevelType.towerDefence);
                     break;
             }
+            SceneType = sceneType;
         }
 
 
