@@ -1,3 +1,4 @@
+using Character.Controllers;
 using Character.TrainSlots;
 using UnityEngine;
 using WRA.CharacterSystems;
@@ -10,12 +11,22 @@ namespace Pool.Objects
         public TrainSlot[] TrainSlots => trainSlots;
         public TrainSlot SelectedSlot => selectedSlot;
         
+        public MoneyController MoneyController { get; private set; }
+        
+        public ExpController ExpController { get; private set; }
+        
         [SerializeField] private TrainSlot[] trainSlots;
         
         private TrainSlot selectedSlot;
         public override void OnInit()
         {
+            MoneyController = GetComponent<MoneyController>();
+            ExpController = GetComponent<ExpController>();
             
+            foreach (var trainSlot in trainSlots)
+            {
+                trainSlot.SetTrain(this);
+            }
         }
 
         public override void OnSpawn()

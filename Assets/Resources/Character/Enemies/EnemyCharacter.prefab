@@ -105,7 +105,6 @@ GameObject:
   - component: {fileID: 5845693683429680270}
   - component: {fileID: 799782300390890680}
   - component: {fileID: 1809142734717893698}
-  - component: {fileID: 1049232620370014633}
   m_Layer: 6
   m_Name: EnemyCharacter
   m_TagString: Untagged
@@ -354,20 +353,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyAmount: 10
---- !u!114 &1049232620370014633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6335419705855910322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44029ac5c274df1449777e8ea38493b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  expAfterDead: 25
-  isPlayer: 0
 --- !u!1001 &2417287898529317503
 PrefabInstance:
   m_ObjectHideFlags: 0

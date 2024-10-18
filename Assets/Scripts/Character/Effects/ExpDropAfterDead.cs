@@ -6,9 +6,10 @@ using WRA.CharacterSystems.StatisticsSystem.ResourcesInfos;
 
 namespace Character.Effects
 {
-    public class MoneyDropAfterDead : MonoBehaviour
+    public class ExpDropAfterDead : MonoBehaviour
     {
-        [SerializeField] private int moneyAmount = 10;
+        [SerializeField] private int expCount;
+        
         private HealthSystemBaseController healthSystemBaseController;
         
         void Awake()
@@ -19,7 +20,7 @@ namespace Character.Effects
         
         void DropMoney(KillInfo killInfo)
         {
-            TrainSpawner.Train.MoneyController.AddMoney(moneyAmount);
+            TrainSpawner.Train.ExpController.AddExp(expCount);
         }
     }
 }

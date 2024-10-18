@@ -37,6 +37,15 @@ namespace Pool.Objects
             }
         }
 
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            bool isEnemy = targetInfo.EnemyLayer == (targetInfo.EnemyLayer | (1 << other.gameObject.layer));
+            if (isEnemy)
+            {
+                Kill();
+            }
+        }
+
         public override void OnInit()
         {
             

@@ -15,8 +15,6 @@ namespace Character.Controllers
         public int CurretnLevel => curretnLevel;
         public int CurretnExp => currentExp;
         
-        [SerializeField] private int expAfterDead = 10;
-        [SerializeField] private bool isPlayer;
 
         [Inject] private PanelManager panelManager;
 
@@ -25,22 +23,7 @@ namespace Character.Controllers
         
         private HealthSystemBaseController healthSystemBaseController;
         
-        void Awake()
-        {
-            if (!isPlayer)
-            {
-                healthSystemBaseController = GetComponent<HealthSystemBaseController>();
-                healthSystemBaseController.OnKilled.AddListener(GiveExp);
-            }
-        }
-
-        private void GiveExp(KillInfo arg0)
-        {
-            var expController = arg0.Owner.GetComponent<ExpController>();
-            expController?.AddExp(expAfterDead);
-        }
-
-        private void AddExp(int exp)
+        public void AddExp(int exp)
         {
             currentExp += exp;
             if (LEVELS.Count <= curretnLevel)

@@ -364,6 +364,7 @@ GameObject:
   - component: {fileID: 6831684052272640923}
   - component: {fileID: 2416052033968995245}
   - component: {fileID: 999392508012249531}
+  - component: {fileID: -3938551112354684524}
   m_Layer: 7
   m_Name: TrainCharacter
   m_TagString: Untagged
@@ -572,6 +573,20 @@ MonoBehaviour:
     Value: 500
   - StatisticName: Shield
     Value: 0
+--- !u!114 &-3938551112354684524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5668027156207216349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44029ac5c274df1449777e8ea38493b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expAfterDead: 10
+  isPlayer: 0
 --- !u!1 &6159636138072960014
 GameObject:
   m_ObjectHideFlags: 0

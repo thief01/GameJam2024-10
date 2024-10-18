@@ -24,6 +24,7 @@ namespace Character.TrainSlots
         [Inject] private PanelManager panelManager;
         
         private TurretCharacter turretAttached;
+        private Train train;
         private bool isSelected;
 
         private void Start()
@@ -32,6 +33,11 @@ namespace Character.TrainSlots
             {
                 BuildTurret(startTurrret, false);
             }
+        }
+
+        public void SetTrain(Train train)
+        {
+            this.train = train;
         }
 
         public void OnClick()
@@ -74,10 +80,10 @@ namespace Character.TrainSlots
         
         private void BuildTurret(int id = 0, bool removeMoney = true)
         {
-            if(buyPrice > MoneyController.Instance.Money)
+            if(buyPrice > train.MoneyController.Money)
                 return;
             if(removeMoney)
-                MoneyController.Instance.RemoveMoney(buyPrice);
+                train.MoneyController.RemoveMoney(buyPrice);
             var turret = turretPool.SpawnObject(id);
             turret.transform.SetParent(transform);
             turret.transform.position = transform.position;
@@ -87,16 +93,16 @@ namespace Character.TrainSlots
         
         private void UpgradeTurret()
         {
-            if(upgradePrice > MoneyController.Instance.Money)
+            if(upgradePrice > train.MoneyController.Money)
                 return;
-            MoneyController.Instance.RemoveMoney(upgradePrice);
+            train.MoneyController.RemoveMoney(upgradePrice);
             turretAttached.Upgrade();
             OnClick();
         }
         
         public void SellTurret()
         {
-            MoneyController.Instance.AddMoney(sellPrice);
+            train.MoneyController.AddMoney(sellPrice);
             turretAttached.GetComponent<Turret>().Kill();
             turretAttached = null;
             OnClick();

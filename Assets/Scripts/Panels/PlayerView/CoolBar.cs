@@ -15,7 +15,7 @@ namespace Panels.PlayerView
         [SerializeField] private float delayTime = 0.2f;
         [SerializeField] private float fillSpeed = 0.5f;
         
-        private float targetValue = 0;
+        private float targetValue = 1;
 
         private float currentDelayTime = 0;
 
