@@ -1,5 +1,6 @@
 using System;
 using Character.Bullet;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -40,6 +41,8 @@ namespace Character.Behaviours
         private GameControlls gameControlls;
         private bool isControlled;
         private bool isAttacking;
+        
+        private Vector3 maxTarget;
 
 
         private void Awake()
@@ -62,7 +65,13 @@ namespace Character.Behaviours
                 attackCooldown -= Time.deltaTime;
             }
         }
-        
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawSphere(maxTarget, 0.1f);
+        }
+
         private void Init()
         {
             dynamicStatisticsController = GetComponent<DynamicStatisticsController>();
@@ -153,7 +162,8 @@ namespace Character.Behaviours
             {
                 var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 var direction = (worldPoint - transform.position).normalized;
-                return transform.position + direction * attackRange.Value;
+                maxTarget = transform.position + (direction) * attackRange.Value;
+                return maxTarget;
             }
             
             Collider2D closestEnemy = null;
