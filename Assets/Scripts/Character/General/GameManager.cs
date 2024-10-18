@@ -26,13 +26,20 @@ namespace Character.General
             mapScrolling = FindAnyObjectByType<MapScrolling>();
         }
 
-
-        private void Start()
+        public void OnSceneChanged(SceneType sceneType)
         {
-            trainSpawner.SpawnTrain();
-            fadeManager = panelManager.OpenPanel("FadeManager") as FadeManager;
-            fadeManager.SetFadeAlpha(1);
-            StartLevel(LevelType.towerDefence);
+            switch (sceneType)
+            {
+                case SceneType.mainMenuScene:
+                    panelManager.OpenPanel("MainMenuPanel");
+                    break;
+                case SceneType.testScene:
+                    trainSpawner.SpawnTrain();
+                    fadeManager = panelManager.OpenPanel("FadeManager") as FadeManager;
+                    fadeManager.SetFadeAlpha(1);
+                    StartLevel(LevelType.towerDefence);
+                    break;
+            }
         }
 
 
