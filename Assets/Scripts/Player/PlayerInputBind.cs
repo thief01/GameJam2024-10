@@ -9,8 +9,6 @@ namespace Player
 {
     public class PlayerInputBind : MonoBehaviour
     {
-        [Inject] private GameManager gameManager;
-        
         private GameControlls gameControlls;
 
         private void Start()
