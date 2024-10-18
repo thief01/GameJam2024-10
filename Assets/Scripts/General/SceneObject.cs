@@ -12,12 +12,16 @@ namespace General
 
         private GameManager gameManager;
 
+        private void Start()
+        {
+            gameManager.OnSceneChanged(sceneType);
+        }
 
         [Inject]
         private void InitGameManager(GameManagerBase gameManagerBase)
         {
             gameManager = (GameManager)gameManagerBase;
-            gameManager.OnSceneChanged(sceneType);
+            
         }
     }
 }
