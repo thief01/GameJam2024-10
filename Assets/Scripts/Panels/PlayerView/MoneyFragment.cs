@@ -1,12 +1,14 @@
 using Character.Controllers;
 using TMPro;
 using UnityEngine;
+using WRA.CharacterSystems;
 using WRA.UI.PanelsSystem;
 
 namespace Panels
 {
     public class MoneyFragment : PanelFragmentBase
     {
+        [SerializeField] private string goldText;
         [SerializeField] private TextMeshProUGUI moneyText;
     
         private MoneyController moneyController;
@@ -15,14 +17,15 @@ namespace Panels
         {
             if (moneyController == null)
                 return;
-        
-            moneyText.text = moneyController.Money.ToString();
-        
+
+            moneyText.text = goldText + moneyController.Money;
+
         }
 
         public override void OnPanelDataChanged()
         {
-            moneyController = (MoneyController) ParentPanel.GetDataAsType<PanelDataBase>().Data;
+            var cho = (CharacterObject) ParentPanel.GetDataAsType<PanelDataBase>().Data;
+            moneyController = cho.GetCharacterSystem<MoneyController>();
         }
     }
 }

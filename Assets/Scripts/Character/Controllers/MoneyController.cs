@@ -32,11 +32,6 @@ namespace Character.Controllers
             Instance = this;
         }
 
-        private void Start()
-        {
-            panelManager.OpenPanel("PlayerView", new PanelDataBase() {Data = this});
-        }
-
         public void AddMoney(int money)
         {
             Money += money;
