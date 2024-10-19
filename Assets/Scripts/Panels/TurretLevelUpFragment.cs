@@ -1,5 +1,6 @@
 using Character.Behaviours;
 using Character.Controllers;
+using Character.TrainSlots;
 using Pool.Objects;
 using TMPro;
 using UnityEngine;
@@ -14,8 +15,8 @@ namespace Panels
         
         public override void OnPanelDataChanged()
         {
-            var expController = (ExpController) ParentPanel.GetDataAsType<PanelDataBase>().Data;
-            turret = expController.GetComponent<TurretBehaviour>();
+            var trainSlot = (TrainSlot) ParentPanel.GetDataAsType<PanelDataBase>().Data;
+            turret = trainSlot.TurretAttached.TurretBehaviour;
             turretName.text = turret.name;
         }
         

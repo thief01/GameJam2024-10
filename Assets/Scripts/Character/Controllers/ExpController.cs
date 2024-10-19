@@ -49,6 +49,11 @@ namespace Character.Controllers
             }
         }
         
+        public void RemoveUpgradePoint(int count = 1)
+        {
+            AvailableUpgradePoints -= count;
+        }
+        
         private void RecalculateMaxExp()
         {
             var fiveLevels = curretnLevel / 5;

@@ -13,6 +13,7 @@ namespace Character.TrainSlots
 {
     public class TrainSlot : MonoBehaviour, IClickable
     {
+        public Train Train => train;
         public TurretCharacter TurretAttached => turretAttached;
         public bool IsSelected => isSelected;
         
@@ -94,11 +95,7 @@ namespace Character.TrainSlots
         
         private void UpgradeTurret()
         {
-            if(upgradePrice > train.MoneyController.Money)
-                return;
-            train.MoneyController.RemoveMoney(upgradePrice);
-            turretAttached.Upgrade();
-            SelectSlot();
+            panelManager.OpenPanel("LevelUpPanelTurret", new PanelDataBase() { Data = this });
         }
         
         public void SellTurret()
