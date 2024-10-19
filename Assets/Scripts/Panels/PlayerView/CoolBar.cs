@@ -42,13 +42,13 @@ namespace Panels.PlayerView
         {
             if (maxValue == 0)
             {
-                this.value.text = "0/0";
+                this.value.text = "MAX";
                 targetValue = 1;
                 return;
             }
             targetValue = value / maxValue;
             
-            this.value.text = $"{value}/{maxValue}";
+            this.value.text = $"{value} / {maxValue}";
         }
     }
 }

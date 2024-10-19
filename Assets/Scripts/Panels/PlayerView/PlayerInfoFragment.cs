@@ -1,4 +1,5 @@
 using Character.Controllers;
+using TMPro;
 using UnityEngine;
 using WRA.CharacterSystems;
 using WRA.CharacterSystems.StatisticsSystem.Controllers;
@@ -11,6 +12,7 @@ namespace Panels.PlayerView
     {
         [SerializeField] private CoolBar healthBar;
         [SerializeField] private CoolBar expBar;
+        [SerializeField] private TextMeshProUGUI levelText;
 
         private HealthSystemBaseController healthSystemBaseController;
         private ExpController expController;
@@ -21,7 +23,8 @@ namespace Panels.PlayerView
             healthSystemBaseController = player.GetCharacterSystem<HealthSystemBaseController>();
             healthSystemBaseController.OnValueChanged.AddListener(OnHealthChanged);
             expController = player.GetCharacterSystem<ExpController>();
-expController.OnValueChanged.AddListener(OnExpChanged);
+            expController.OnValueChanged.AddListener(OnExpChanged);
+            OnExpChanged();
             
             OnHealthChanged(1);
         }
@@ -29,6 +32,7 @@ expController.OnValueChanged.AddListener(OnExpChanged);
         private void OnExpChanged()
         {
             expBar.SetValue(expController.CurretnExp, expController.CurrentMaxExp);
+            levelText.text = $"Level {expController.CurretnLevel}";
         }
 
         private void OnHealthChanged(float value)
