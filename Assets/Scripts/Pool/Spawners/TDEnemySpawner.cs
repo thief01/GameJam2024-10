@@ -65,6 +65,7 @@ namespace Pool.Spawners
             }
             var spawnedEnemy = enemyPool.SpawnObject(id);
             spawnedEnemy.transform.position = transform.position;
+            spawnCount--;
             // var enemyBehaviour = spawnedEnemy.GetComponent<EnemyBehaviour>();
         }
     }

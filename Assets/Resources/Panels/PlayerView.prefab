@@ -969,8 +969,8 @@ MonoBehaviour:
   value: {fileID: 6183477134555557783}
   mainBar: {fileID: 6471229224331477609}
   secondBar: {fileID: 5482267435201947129}
-  delayTime: 1
-  fillSpeed: 0.05
+  delayTime: 0
+  fillSpeed: 0.1
 --- !u!1 &5665383824218673709
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System;
 using Character.General;
+using Interfaces;
 using Pool.Objects;
 using Pool.Spawners;
 using UnityEngine;
@@ -29,6 +30,9 @@ namespace Player
 
         private void OnLeftClick()
         {
+            if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+                return;
+            
             TrainSpawner.Train.ReleaseControl();
             TrainSpawner.Train.DeselectAllSlots();
             var mousePosition = Input.mousePosition;
@@ -38,7 +42,7 @@ namespace Player
                 var clickalbe = collider.GetComponent<IClickable>();
                 if (clickalbe != null)
                 {
-                    clickalbe.OnClick();
+                    clickalbe.OnClick(new ClickData(gameControlls));
                 }
             }
         }

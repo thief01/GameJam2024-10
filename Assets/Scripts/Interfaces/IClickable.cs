@@ -1,6 +1,7 @@
-using UnityEngine;
-
-public interface IClickable
+namespace Interfaces
 {
-    void OnClick();
+    public interface IClickable
+    {
+        void OnClick(ClickData data);
+    }
 }

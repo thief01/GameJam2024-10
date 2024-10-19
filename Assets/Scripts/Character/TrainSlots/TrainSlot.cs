@@ -1,5 +1,6 @@
 using System;
 using Character.Controllers;
+using Interfaces;
 using Panels;
 using Pool.Objects;
 using Pool.Spawners;
@@ -40,9 +41,9 @@ namespace Character.TrainSlots
             this.train = train;
         }
 
-        public void OnClick()
+        public void OnClick(ClickData data)
         {
-            TrainSpawner.Train.SelectSlot(this);
+            train.TakeControl((GameControlls)data.Data, Array.IndexOf(train.TrainSlots, this));
         }
 
         public void SelectSlot()
@@ -88,7 +89,7 @@ namespace Character.TrainSlots
             turret.transform.SetParent(transform);
             turret.transform.position = transform.position;
             turretAttached = turret.GetComponent<TurretCharacter>();
-            OnClick();
+            SelectSlot();
         }
         
         private void UpgradeTurret()
@@ -97,7 +98,7 @@ namespace Character.TrainSlots
                 return;
             train.MoneyController.RemoveMoney(upgradePrice);
             turretAttached.Upgrade();
-            OnClick();
+            SelectSlot();
         }
         
         public void SellTurret()
@@ -105,7 +106,7 @@ namespace Character.TrainSlots
             train.MoneyController.AddMoney(sellPrice);
             turretAttached.GetComponent<Turret>().Kill();
             turretAttached = null;
-            OnClick();
+            SelectSlot();
         }
     }
 }

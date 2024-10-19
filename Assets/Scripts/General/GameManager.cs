@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using General;
+using General.TowerDefense;
 using Pool.Spawners;
 using UnityEngine;
 using WRA_SDK.WRA.General;
+using WRA.General.Patterns.Pool;
 using WRA.UI.PanelsSystem;
 using WRA.UI.PanelsSystem.FadeSystem;
 using Zenject;
@@ -16,6 +18,7 @@ namespace Character.General
         public SceneType SceneType { get; private set; }
         [SerializeField] private TrainSpawner trainSpawner;
 
+        [Inject] private PoolBase<LevelObject> levelObjectPool;
         [Inject] private PanelManager panelManager;
         
         private List<TDEnemySpawner> spawners = new List<TDEnemySpawner>();
@@ -38,16 +41,17 @@ namespace Character.General
                     trainSpawner.SpawnTrain();
                     fadeManager = panelManager.OpenPanel("FadeManager") as FadeManager;
                     fadeManager.SetFadeAlpha(1);
-                    StartLevel(LevelType.towerDefence);
+                    StartLevel(0);
                     break;
             }
             SceneType = sceneType;
         }
 
 
-        public void StartLevel(LevelType levelType)
+        public void StartLevel(int levelId = 0)
         {
             fadeManager.FadeIn(OnEndFadeIn);
+            levelObjectPool.SpawnObject(levelId);
         }
         
         public void AddSpawner(TDEnemySpawner spawner)

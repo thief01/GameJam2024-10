@@ -40,7 +40,15 @@ namespace Panels.PlayerView
 
         public void SetValue(float value, float maxValue)
         {
+            if (maxValue == 0)
+            {
+                this.value.text = "0/0";
+                targetValue = 1;
+                return;
+            }
             targetValue = value / maxValue;
+            
+            this.value.text = $"{value}/{maxValue}";
         }
     }
 }
