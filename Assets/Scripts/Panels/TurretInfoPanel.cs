@@ -3,6 +3,7 @@ using Character.TrainSlots;
 using Pool.Objects;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using WRA.UI.PanelsSystem;
 
 namespace Panels
@@ -10,6 +11,7 @@ namespace Panels
     public class TurretInfoPanel : InfoPanelBase
     {
         [SerializeField] private TextMeshProUGUI availableUpgrades;
+        [SerializeField] private Button upgradeButton;
 
         private ExpController expController;
         private Train train;
@@ -32,10 +34,12 @@ namespace Panels
             train = trainSlot.Train;
             expController = train.ExpController;
             expController.OnValueChanged.AddListener(OnExpChanged);
+            OnExpChanged();
         }
 
         private void OnExpChanged()
         {
+            upgradeButton.interactable = expController.AvailableUpgradePoints > 0;
             availableUpgrades.text = "Available upgrades: " + expController.AvailableUpgradePoints;
         }
     }
