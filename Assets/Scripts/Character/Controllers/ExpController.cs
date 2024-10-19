@@ -12,14 +12,18 @@ namespace Character.Controllers
 {
     public class ExpController : CharacterSystemBase
     {
-        private readonly List<int> LEVELS = new List<int> { 50, 100, 200, 300 };
+        private const int BASE_MAX_EXP = 50;
+        private const int LEVEL_UPGRADE_EXP = 50;
+        private const int LEVEL_5_UPGRADE_EXP = 200;
         
         public UnityEvent OnValueChanged;
         
+        public int AvailableUpgradePoints { get; private set; } = 0;
+        
         public int CurretnLevel => curretnLevel;
         public int CurretnExp => currentExp;
-        
-        public int CurrentMaxExp => LEVELS[curretnLevel];
+
+        public int CurrentMaxExp { get; private set; } = BASE_MAX_EXP;
         
 
         [Inject] private PanelManager panelManager;
@@ -33,15 +37,22 @@ namespace Character.Controllers
         {
             currentExp += exp;
             OnValueChanged.Invoke();
-            if (LEVELS.Count <= curretnLevel)
+            if (CurrentMaxExp <= curretnLevel)
                 return;
             
-            if (currentExp >= LEVELS[curretnLevel])
+            if (currentExp >= CurrentMaxExp)
             {
                 curretnLevel++;
-                currentExp = 0;
-                panelManager.OpenPanel("LevelUpPanelTurret", new PanelDataBase() {Data = this});
+                currentExp = CurretnExp - CurrentMaxExp;
+                AvailableUpgradePoints++;
+                RecalculateMaxExp();
             }
+        }
+        
+        private void RecalculateMaxExp()
+        {
+            var fiveLevels = curretnLevel / 5;
+            CurrentMaxExp = BASE_MAX_EXP + LEVEL_UPGRADE_EXP * curretnLevel + LEVEL_5_UPGRADE_EXP * fiveLevels;
         }
     }
 }
