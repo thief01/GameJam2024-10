@@ -161,8 +161,9 @@ namespace Character.Behaviours
             if (isControlled)
             {
                 var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                var direction = (worldPoint - transform.position).normalized;
-                maxTarget = transform.position + (direction) * attackRange.Value;
+                var direction = (Vector2)(worldPoint - transform.position);
+                direction = direction.normalized;
+                maxTarget = transform.position + (Vector3)(direction * attackRange.Value);
                 return maxTarget;
             }
             
