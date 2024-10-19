@@ -24,6 +24,8 @@ namespace Panels
 
         public void Upgrade()
         {
+            if (expController.AvailableUpgradePoints <= 0)
+                return;
             ParentPanel.PanelManager.OpenPanel("LevelUpPanelTurret", new PanelDataBase() { Data = trainSlot });
         }
         

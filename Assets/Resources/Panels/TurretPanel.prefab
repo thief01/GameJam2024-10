@@ -826,6 +826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: {fileID: 4376246044742986186}
   availableUpgrades: {fileID: 2819608511374121520}
+  upgradeButton: {fileID: 8460541628295063494}
 --- !u!224 &8524715957460670268 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7207385625430444031, guid: 64392e0d28c50cd4dac42e3114e91681, type: 3}
