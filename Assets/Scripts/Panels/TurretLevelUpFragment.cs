@@ -12,11 +12,13 @@ namespace Panels
     {
         [SerializeField] private TextMeshProUGUI turretName;
         private TurretBehaviour turret;
+        private Train train;
         
         public override void OnPanelDataChanged()
         {
             var trainSlot = (TrainSlot) ParentPanel.GetDataAsType<PanelDataBase>().Data;
             turret = trainSlot.TurretAttached.TurretBehaviour;
+            train = trainSlot.Train;
             turretName.text = turret.name;
         }
         
@@ -24,12 +26,14 @@ namespace Panels
         {
             turret.UpgradeDamage();
             ParentPanel.PanelActionsFragment.CloseThisPanel();
+            train.ExpController.RemoveUpgradePoint();
         }
         
         public void UpgradeAttackSpeed()
         {
             turret.UpgradeAttackSpeed();
             ParentPanel.PanelActionsFragment.CloseThisPanel();
+            train.ExpController.RemoveUpgradePoint();
         }
     }
 }
