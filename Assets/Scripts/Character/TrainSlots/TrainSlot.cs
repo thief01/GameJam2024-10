@@ -95,6 +95,8 @@ namespace Character.TrainSlots
         
         private void UpgradeTurret()
         {
+            if(train.ExpController.AvailableUpgradePoints <= 0)
+                return;
             panelManager.OpenPanel("LevelUpPanelTurret", new PanelDataBase() { Data = this });
         }
         
