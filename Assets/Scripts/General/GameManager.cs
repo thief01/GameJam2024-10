@@ -6,6 +6,7 @@ using General;
 using General.TowerDefense;
 using Pool.Spawners;
 using UnityEngine;
+using UnityEngine.Events;
 using WRA_SDK.WRA.General;
 using WRA.General.Patterns.Pool;
 using WRA.UI.PanelsSystem;
@@ -25,12 +26,6 @@ namespace Character.General
         
         private List<TDEnemySpawner> spawners = new List<TDEnemySpawner>();
         private FadeManager fadeManager;
-        private MapScrolling mapScrolling;
-
-        private void Awake()
-        {
-            mapScrolling = FindAnyObjectByType<MapScrolling>();
-        }
 
         public void OnSceneChanged(SceneType sceneType)
         {
@@ -38,12 +33,11 @@ namespace Character.General
             {
                 case SceneType.mainMenuScene:
                     trainSpawner.RemoveTrain();
-                    panelManager.OpenPanel("MainMenuPanel");
+                    panelManager.OpenPanel("MainMenuPanel", new PanelDataBase());
                     break;
                 case SceneType.gameScene:
                     trainSpawner.SpawnTrain();
-                    fadeManager = panelManager.OpenPanel("FadeManager") as FadeManager;
-                    fadeManager.SetData(new PanelDataBase() { Data = "TEST"});
+                    fadeManager = panelManager.OpenPanel("FadeManager", new PanelDataBase() { Data = "Level 0"}) as FadeManager;
                     fadeManager.SetFadeAlpha(1);
                     fadeManager.FadeIn();
                     break;
@@ -51,11 +45,16 @@ namespace Character.General
             SceneType = sceneType;
         }
 
-
-        public void StartLevel(int levelId = 0)
+        public void StartTowerDefenceLevel(int levelId = 0)
         {
             fadeManager.FadeIn(OnEndFadeIn);
             levelObjectPool.SpawnObject(levelId);
+        }
+
+        public void StartRougeLikeLevel()
+        {
+            // generate level
+            // spawn correct map
         }
         
         public void AddSpawner(TDEnemySpawner spawner)
@@ -74,7 +73,6 @@ namespace Character.General
             fadeManager.FadeOut();
             yield return new WaitForSeconds(5);
             spawners.ForEach(ctg => ctg.StartSpawning());
-            mapScrolling.StopScrolling();
         }
     }
 }
