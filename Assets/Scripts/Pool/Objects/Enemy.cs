@@ -11,6 +11,7 @@ namespace Pool.Objects
 {
     public class Enemy : CharacterObject
     {
+        public HealthSystemBaseController HealthSystemBaseController => healthSystemBaseController;
         private HealthSystemBaseController healthSystemBaseController;
         private EnemyBehaviour enemyBehaviour;
         

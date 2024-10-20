@@ -20,6 +20,11 @@ namespace Pool.Spawners
             Train = spawnedTrain.GetComponent<Train>();
             panelManager.OpenPanel("PlayerView", new PanelDataBase() {Data = Train});
         }
-    
+
+        public void RemoveTrain()
+        {
+            Train?.Kill();
+            Train = null;
+        }
     }
 }

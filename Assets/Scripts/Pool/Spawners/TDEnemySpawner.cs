@@ -6,6 +6,7 @@ using Pool.Objects;
 using UnityEngine;
 using UnityEngine.Splines;
 using WRA_SDK.WRA.General;
+using WRA.CharacterSystems.StatisticsSystem.ResourcesInfos;
 using WRA.General.Patterns.Pool;
 using Zenject;
 
@@ -13,12 +14,15 @@ namespace Pool.Spawners
 {
     public class TDEnemySpawner : MonoBehaviour
     {
+        public int LeftEnemies => spawnedEnemies.Count + spawnCount;
         [SerializeField] private float spawnDelay = 1;
         [SerializeField] private List<int> spawnEnemies;
         [SerializeField] private int spawnCount = 1;
 
-        private GameManager gameManager;
+        
         [Inject] private PoolBase<Enemy> enemyPool;
+        private GameManager gameManager;
+        private List<Enemy> spawnedEnemies = new List<Enemy>();
         
         private bool isSpawning = false;
         private int currentSpawnCount = 0;
@@ -59,14 +63,26 @@ namespace Pool.Spawners
         
         private void SpawnUnit(int id)
         {
-            if (spawnCount != 0 && currentSpawnCount >= spawnCount)
+            if (spawnCount != -1 && currentSpawnCount >= spawnCount)
             {
                 return;
             }
             var spawnedEnemy = enemyPool.SpawnObject(id);
             spawnedEnemy.transform.position = transform.position;
-            spawnCount--;
-            // var enemyBehaviour = spawnedEnemy.GetComponent<EnemyBehaviour>();
+            var enemy = spawnedEnemy as Enemy;
+            spawnedEnemies.Add(enemy);
+            enemy.HealthSystemBaseController.OnKilled.AddListener(OnKill);
+            currentSpawnCount++;
+        }
+
+        private void OnKill(KillInfo killInfo)
+        {
+            var killed = spawnedEnemies.Find(ctg => ctg.HealthSystemBaseController == killInfo.KilledUnit);
+            if (killed != null)
+            {
+                spawnedEnemies.Remove(killed);
+                killed.HealthSystemBaseController.OnKilled.RemoveListener(OnKill);
+            }
         }
     }
 }

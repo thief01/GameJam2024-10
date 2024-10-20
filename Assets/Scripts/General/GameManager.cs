@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using General;
 using General.TowerDefense;
 using Pool.Spawners;
@@ -15,6 +16,7 @@ namespace Character.General
 {
     public class GameManager : GameManagerBase
     {
+        public int LeftEnemies => spawners.Sum(ctg => ctg.LeftEnemies);
         public SceneType SceneType { get; private set; }
         [SerializeField] private TrainSpawner trainSpawner;
 
@@ -35,13 +37,15 @@ namespace Character.General
             switch (sceneType)
             {
                 case SceneType.mainMenuScene:
+                    trainSpawner.RemoveTrain();
                     panelManager.OpenPanel("MainMenuPanel");
                     break;
-                case SceneType.testScene:
+                case SceneType.gameScene:
                     trainSpawner.SpawnTrain();
                     fadeManager = panelManager.OpenPanel("FadeManager") as FadeManager;
+                    fadeManager.SetData(new PanelDataBase() { Data = "TEST"});
                     fadeManager.SetFadeAlpha(1);
-                    StartLevel(0);
+                    fadeManager.FadeIn();
                     break;
             }
             SceneType = sceneType;

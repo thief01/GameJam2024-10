@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 6821284377479636461}
   - component: {fileID: 5031488029964851444}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -804,7 +804,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Wave count: 155'
+  m_text: 'Left time: 50'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1313,6 +1313,7 @@ MonoBehaviour:
   healthBar: {fileID: 8523429182009784144}
   expBar: {fileID: 4131940723766740785}
   levelText: {fileID: 3487846239812999421}
+  enemyCountText: {fileID: 5031488029964851444}
 --- !u!1 &7794156468766550027
 GameObject:
   m_ObjectHideFlags: 0

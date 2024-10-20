@@ -1,12 +1,16 @@
 using System;
 using System.Collections.Generic;
+using Character.General;
 using UnityEngine;
 using UnityEngine.Serialization;
+using WRA_SDK.WRA.General;
+using Zenject;
 
 namespace General
 {
     public class MapScrolling : MonoBehaviour
     {
+        [SerializeField] private bool isScrolling = false;
         [SerializeField] private bool startScrolling = false;
         [SerializeField] private float maxScrollSpeed = 1f;
         [SerializeField] private AnimationCurve startScrollSpeedCurve;
@@ -15,10 +19,11 @@ namespace General
         
         [SerializeField] private Vector3 resetPosition;
         [SerializeField] private float resetDistance;
+
+        private GameManager gameManager;
         
         private float currentScrollSpeed;
         private float delta = 0;
-        [SerializeField] private bool isScrolling = false;
 
         private void Awake()
         {
@@ -44,6 +49,12 @@ namespace General
             delta = Mathf.Clamp(delta, 0, 1);
             Scroll();
             ResetScroll();
+        }
+
+        [Inject]
+        private void Construct(GameManagerBase gameManagerBase)
+        {
+            gameManager = gameManagerBase as GameManager;
         }
         
         public void StartScrolling()
